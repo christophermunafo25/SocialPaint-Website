@@ -136,7 +136,7 @@ export function ContentStudioPage() {
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
             <p className="text-[#231f23] text-[36px] font-[Stack_Sans_Headline] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[760px]" style={{ fontWeight: 400 }}>
-              Create anything,<br className="hidden sm:inline" /> always on-brand
+              Create anything,<br className="hidden sm:inline" /> <span className="accent-italic">always on-brand</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>

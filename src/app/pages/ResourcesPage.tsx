@@ -72,8 +72,8 @@ export function ResourcesPage() {
             </div>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]">
-              Learn, build, and scale your content
+            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]" style={{ fontWeight: 400 }}>
+              Learn, build, and <span className="accent-italic">scale your content</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
@@ -124,7 +124,7 @@ export function ResourcesPage() {
               <div className="bg-[#A7FFAC] rounded-[2px] shrink-0 size-[10px]" />
               <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[12px] tracking-[0.75px] uppercase">Getting Started</p>
             </div>
-            <p className="text-[#231f23] text-[24px] sm:text-[32px] tracking-[-0.5px] leading-[1.15]">
+            <p className="text-[#231f23] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15]">
               Guides & playbooks
             </p>
           </AnimatedSection>
@@ -148,7 +148,7 @@ export function ResourcesPage() {
               </div>
               <p className="font-['Fragment_Mono',monospace] text-[rgba(247,246,245,0.48)] text-[12px] tracking-[0.75px] uppercase">For developers</p>
             </div>
-            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] tracking-[-0.5px] leading-[1.15]">
+            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15]">
               Build on the Socialpaint API
             </p>
           </AnimatedSection>
@@ -184,7 +184,7 @@ export function ResourcesPage() {
                 <div className="bg-[#ed7472] rounded-[2px] shrink-0 size-[10px]" />
                 <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[12px] tracking-[0.75px] uppercase">Blog & News</p>
               </div>
-              <p className="text-[#231f23] text-[24px] sm:text-[32px] tracking-[-0.5px] leading-[1.15]">
+              <p className="text-[#231f23] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15]">
                 Latest from Socialpaint
               </p>
             </div>
@@ -206,7 +206,7 @@ export function ResourcesPage() {
             <div className="w-12 h-12 rounded-full bg-[rgba(247,246,245,0.08)] flex items-center justify-center">
               <Mail size={22} color="#f7f6f5" />
             </div>
-            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] tracking-[-0.5px] leading-[1.15]">
+            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15]">
               Stay up to date with Socialpaint
             </p>
             <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>

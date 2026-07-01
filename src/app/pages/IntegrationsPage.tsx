@@ -67,8 +67,8 @@ export function IntegrationsPage() {
             </div>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]">
-              Connects to your entire content stack
+            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]" style={{ fontWeight: 400 }}>
+              Connects to your entire <span className="accent-italic">content stack</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
@@ -107,7 +107,7 @@ export function IntegrationsPage() {
                 <div className="flex gap-2 items-center px-3 py-1.5 rounded-lg" style={{ backgroundColor: category.tagColor }}>
                   <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[11px] tracking-[0.75px] uppercase">{category.tag}</p>
                 </div>
-                <p className="text-[#231f23] text-[24px] sm:text-[32px] lg:text-[36px] tracking-[-0.5px] leading-[1.15]">
+                <p className="text-[#231f23] text-[24px] sm:text-[32px] lg:text-[36px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15]">
                   {category.title}
                 </p>
               </div>
@@ -151,7 +151,7 @@ export function IntegrationsPage() {
                   </div>
                   <p className="font-['Fragment_Mono',monospace] text-[rgba(247,246,245,0.48)] text-[12px] tracking-[0.75px] uppercase">REST API</p>
                 </div>
-                <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] tracking-[-0.5px] leading-[1.15] mb-4">
+                <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] mb-4">
                   Build custom integrations
                 </p>
                 <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[24px] mb-8 max-w-[400px]" style={{ fontWeight: 300 }}>

@@ -81,8 +81,8 @@ export function PricingPage() {
             </div>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]">
-              Simple pricing, powerful results
+            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]" style={{ fontWeight: 400 }}>
+              Simple pricing, <span className="accent-italic">powerful results</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
@@ -184,7 +184,7 @@ export function PricingPage() {
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
         <div className="max-w-[1100px] mx-auto">
           <AnimatedSection className="mb-10 md:mb-12">
-            <p className="text-[#231f23] text-[24px] sm:text-[32px] lg:text-[36px] tracking-[-0.5px] leading-[1.15] text-center">
+            <p className="text-[#231f23] text-[24px] sm:text-[32px] lg:text-[36px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] text-center">
               Compare plans
             </p>
           </AnimatedSection>

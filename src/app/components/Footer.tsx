@@ -1,12 +1,14 @@
 import svgPaths from '../../imports/svg-j8kolrt8id';
 import { AnimatedSection } from './AnimatedSection';
 import { Link } from 'react-router-dom';
-import imgLogo from '../../imports/image-1.png';
+
+// DS dark lockup — the footer sits on the light Paper surface.
+const logoDark = '/brand/socialpaint-dark.png';
 
 function Logo() {
   return (
     <Link to="/" className="flex items-center shrink-0 no-underline">
-      <img src={imgLogo} alt="Socialpaint" className="h-[40px] sm:h-[50px] w-auto" />
+      <img src={logoDark} alt="Socialpaint" className="h-[34px] sm:h-[40px] w-auto" />
     </Link>
   );
 }

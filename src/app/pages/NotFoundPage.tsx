@@ -11,8 +11,8 @@ export function NotFoundPage() {
             <p className="font-['Fragment_Mono',monospace] text-[rgba(35,31,35,0.48)] text-[12px] tracking-[0.75px] uppercase">404</p>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]">
-              Page not found
+            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]" style={{ fontWeight: 400 }}>
+              Page <span className="accent-italic">not found</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>

@@ -195,7 +195,7 @@ export function InsightsPage() {
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
             <p className="text-[#231f23] text-[36px] font-[Stack_Sans_Headline] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[760px]" style={{ fontWeight: 400 }}>
-              Know what's working<br className="hidden sm:inline" /> and why
+              Know what's working<br className="hidden sm:inline" /> <span className="accent-italic">and why</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>

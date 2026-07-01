@@ -24,8 +24,8 @@ export function WaitlistPage() {
           </div>
         </AnimatedItem>
         <AnimatedItem delay={0.1}>
-          <p className="leading-[1.1] text-[#231f23] text-[36px] sm:text-[48px] lg:text-[56px] tracking-[-1px] max-w-[720px]" style={{ fontWeight: 500 }}>
-            Join the waitlist
+          <p className="leading-[1.1] text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] lg:text-[56px] tracking-[-1px] max-w-[720px]" style={{ fontWeight: 400 }}>
+            Join the <span className="accent-italic">waitlist</span>
           </p>
         </AnimatedItem>
         <AnimatedItem delay={0.2}>

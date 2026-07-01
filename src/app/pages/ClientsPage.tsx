@@ -44,8 +44,8 @@ export function ClientsPage() {
             </div>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]">
-              Teams that ship smarter choose Socialpaint
+            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]" style={{ fontWeight: 400 }}>
+              Teams that <span className="accent-italic">ship smarter</span> choose Socialpaint
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
@@ -134,7 +134,7 @@ export function ClientsPage() {
               <div className="bg-[#ed7472] rounded-[2px] shrink-0 size-[10px]" />
               <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[12px] tracking-[0.75px] uppercase">Testimonials</p>
             </div>
-            <p className="text-[#231f23] text-[28px] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[560px]">
+            <p className="text-[#231f23] text-[28px] sm:text-[36px] lg:text-[40px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] max-w-[560px]">
               What our clients say
             </p>
           </AnimatedSection>
@@ -172,7 +172,7 @@ export function ClientsPage() {
       <section className="px-4 sm:px-8 pb-16 sm:pb-20 lg:pb-[120px]">
         <AnimatedSection className="w-full max-w-[1100px] mx-auto">
           <div className="bg-[#231f23] rounded-[20px] p-8 sm:p-12 lg:p-16 flex flex-col items-center text-center gap-6">
-            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[480px]">
+            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] lg:text-[40px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] max-w-[480px]">
               Join 500+ teams creating smarter content
             </p>
             <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>
