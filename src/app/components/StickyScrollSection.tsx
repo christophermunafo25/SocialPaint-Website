@@ -1,5 +1,5 @@
 import svgPaths from '../../imports/svg-j8kolrt8id';
-import imgImg from 'figma:asset/13091f815c7b778bab882675d78ea67fe59acd53.png';
+import imgImg from '../../assets/walk-in-style-animated.gif';
 import imgGenerate from 'figma:asset/58841a6f0631fcf2e99f945d5345ce3a0a9f2272.png';
 import { AnimatedItem } from './AnimatedSection';
 import { Link } from 'react-router-dom';
