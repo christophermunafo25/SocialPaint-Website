@@ -240,7 +240,7 @@ export function DarkFeaturesSection() {
   const flowSteps = ['Marketing input', 'Brand development', 'System learning', 'Evolving output'];
 
   return (
-    <section className="bg-[#1a171a] flex flex-col items-center w-full max-w-[1440px] mx-auto z-[4] rounded-[20px] px-4 sm:px-6 md:px-[40px] py-[60px] overflow-hidden">
+    <section className="bg-[#1a171a] flex flex-col items-center w-full max-w-[1440px] mx-auto z-[4] rounded-[20px] px-4 sm:px-8 py-[60px] overflow-hidden">
       <div className="flex flex-col gap-10 sm:gap-14 lg:gap-16 items-center w-full max-w-[1440px]">
 
         {/* Editorial headline + subcopy */}

@@ -234,14 +234,14 @@ function ProductsDropdown({ onClose }: { onClose: () => void }) {
                 <img src={logoLight} alt="Socialpaint" className="h-[18px] w-auto" />
                 <p className="leading-[32px] text-[#f7f6f5] text-[24px]">Your brand, scaled across every channel effortlessly</p>
               </div>
-              <button className="bg-[#f7f6f5] flex gap-2 items-center justify-center px-5 py-3 rounded-lg cursor-pointer">
+              <Link to="/products/style-dna" onClick={onClose} className="bg-[#f7f6f5] flex gap-2 items-center justify-center px-5 py-3 rounded-lg cursor-pointer no-underline">
                 <p className="text-[#231f23] text-[16px] whitespace-nowrap">Explore all products</p>
                 <div className="overflow-clip relative shrink-0 size-[16px]">
                   <svg className="block size-full" fill="none" viewBox="0 0 10.8333 10.8333">
                     <path d={svgPaths.p9a1b880} stroke="#231F23" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                   </svg>
                 </div>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

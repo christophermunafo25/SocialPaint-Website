@@ -18,7 +18,7 @@ export function CTASection() {
               <feGaussianBlur result="effect1_foregroundBlur_cta" stdDeviation="100" />
             </filter>
             <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_cta" x1="854" x2="854" y1="200" y2="495">
-              <stop stopColor="#ED7472" />
+              <stop stopColor="#FF5A72" />
               <stop offset="1" stopColor="#FFED8C" />
             </linearGradient>
           </defs>

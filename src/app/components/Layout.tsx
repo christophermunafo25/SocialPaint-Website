@@ -43,12 +43,22 @@ export function Layout() {
     }
   }, [pathname]);
 
+  // The shared "Ready to create…" Final CTA (with its warm halo) is the page
+  // closer. Suppress it where it would double up: pages that already end in
+  // their own signup CTA — feature pages + Clients (own "Join the Waitlist"
+  // CTA) and Resources (own newsletter CTA) — and the waitlist signup page.
+  const hideFinalCTA =
+    pathname.startsWith('/products/') ||
+    pathname === '/clients' ||
+    pathname === '/resources' ||
+    pathname === '/waitlist';
+
   return (
     <div className="bg-[#f7f6f5] flex flex-col items-center overflow-clip relative min-h-screen">
       <Navigation />
       <Outlet />
       <div className="bg-[#f7f6f5] flex flex-col items-center relative z-[1] w-full">
-        <CTASection />
+        {!hideFinalCTA && <CTASection />}
         <Footer />
       </div>
     </div>

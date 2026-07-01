@@ -37,7 +37,7 @@ function LogoCarousel() {
 
 export function HeroSection() {
   return (
-    <section className="bg-[#f7f6f5] flex flex-col gap-2 md:gap-20 items-center w-full max-w-[1440px] mx-auto relative z-10 px-[32px] pt-[200px] pb-[0px]">
+    <section className="bg-[#f7f6f5] flex flex-col gap-2 md:gap-20 items-center w-full max-w-[1440px] mx-auto relative z-10 px-4 sm:px-8 pt-[200px] pb-[0px]">
       {/* Intro */}
       <AnimatedSection className="flex items-start justify-center w-full max-w-[1440px]">
         <div className="flex flex-col gap-6 md:gap-8 items-start md:items-center w-full">

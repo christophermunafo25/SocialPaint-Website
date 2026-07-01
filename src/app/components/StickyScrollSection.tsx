@@ -273,7 +273,7 @@ export function StickyScrollSection() {
   ];
 
   return (
-    <section className="bg-[#f7f6f5] flex flex-col items-start w-full max-w-[1440px] mx-auto z-[8] px-[32px] pt-[0px] pb-[0px]">
+    <section className="bg-[#f7f6f5] flex flex-col items-start w-full max-w-[1440px] mx-auto z-[8] px-4 sm:px-8 pt-[0px] pb-[0px]">
       {/* Desktop: sticky scroll layout */}
       <div className="hidden lg:flex items-start justify-between w-full -my-[15vh]">
         {/* Left: stacked feature panels */}
