@@ -54,7 +54,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
         <p className="font-['Fragment_Mono',monospace] text-[rgba(35,31,35,0.48)] text-[11px] tracking-[0.75px] uppercase">{resource.type}</p>
       </div>
       <p className="text-[#231f23] text-[16px] mb-2 leading-[1.3]" style={{ fontWeight: 500 }}>{resource.title}</p>
-      <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[20px] flex-1" style={{ fontWeight: 300 }}>{resource.description}</p>
+      <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5] flex-1" style={{ fontWeight: 300 }}>{resource.description}</p>
     </div>
   );
 }
@@ -77,7 +77,7 @@ export function ResourcesPage() {
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[680px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] max-w-[680px]" style={{ fontWeight: 300 }}>
               Guides, tutorials, case studies, and everything you need to get the most out of SocialPaint.
             </p>
           </AnimatedItem>
@@ -103,7 +103,7 @@ export function ResourcesPage() {
               <p className="text-[#231f23] text-[20px] sm:text-[24px] lg:text-[28px] tracking-[-0.5px] leading-[1.2] mb-4" style={{ fontWeight: 500 }}>
                 {featuredArticle.title}
               </p>
-              <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[24px] mb-6" style={{ fontWeight: 300 }}>
+              <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[1.5] mb-6" style={{ fontWeight: 300 }}>
                 {featuredArticle.description}
               </p>
               <Link to="/clients" className="flex gap-2 items-center self-start no-underline group">
@@ -165,7 +165,7 @@ export function ResourcesPage() {
                       <p className="font-['Fragment_Mono',monospace] text-[rgba(247,246,245,0.48)] text-[11px] tracking-[0.75px] uppercase">{r.type}</p>
                     </div>
                     <p className="text-[#f7f6f5] text-[16px] sm:text-[18px] mb-2" style={{ fontWeight: 500 }}>{r.title}</p>
-                    <p className="text-[rgba(247,246,245,0.64)] text-[14px] leading-[20px]" style={{ fontWeight: 300 }}>{r.description}</p>
+                    <p className="text-[rgba(247,246,245,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{r.description}</p>
                   </div>
                 </AnimatedItem>
               );
@@ -209,7 +209,7 @@ export function ResourcesPage() {
             <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15]">
               Stay up to date with SocialPaint
             </p>
-            <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[400px]" style={{ fontWeight: 300 }}>
               Get product updates, content tips, and brand strategy insights delivered to your inbox.
             </p>
             <Link to="/waitlist" className="bg-[#f7f6f5] flex gap-2 items-center justify-center px-5 py-3 rounded-lg cursor-pointer no-underline">

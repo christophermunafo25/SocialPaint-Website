@@ -105,7 +105,7 @@ function HomeDropdown({ onClose }: { onClose: () => void }) {
             </div>
             <div className="flex flex-col gap-1 items-start justify-center">
               <p className="text-[#231f23] text-[16px]" style={{ fontWeight: 400 }}>{item.label}</p>
-              <p className="text-[rgba(35,31,35,0.64)] text-[13px] leading-[20px]" style={{ fontWeight: 300 }}>{item.description}</p>
+              <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{item.description}</p>
             </div>
           </Link>
         ))}
@@ -184,7 +184,7 @@ function ProductsDropdown({ onClose }: { onClose: () => void }) {
                   </div>
                   <div className="flex flex-col gap-1 items-start justify-center flex-1">
                     <p className="text-[#231f23] text-[16px]" style={{ fontWeight: 400 }}>{tool.label}</p>
-                    <p className="text-[rgba(35,31,35,0.64)] text-[13px] leading-[20px]" style={{ fontWeight: 300 }}>{tool.description}</p>
+                    <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{tool.description}</p>
                   </div>
                 </Link>
               );
@@ -210,7 +210,7 @@ function ProductsDropdown({ onClose }: { onClose: () => void }) {
                   </div>
                   <div className="flex flex-col gap-1 items-start justify-center flex-1">
                     <p className="text-[#231f23] text-[16px]" style={{ fontWeight: 400 }}>{tool.label}</p>
-                    <p className="text-[rgba(35,31,35,0.64)] text-[13px] leading-[20px]" style={{ fontWeight: 300 }}>{tool.description}</p>
+                    <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{tool.description}</p>
                   </div>
                 </Link>
               );
@@ -501,7 +501,7 @@ function MobileNavItem({ link, onNavigate }: { link: { label: string; hasDropdow
                   className="flex items-center px-3 py-2.5 rounded-lg hover:bg-[rgba(35,31,35,0.04)] transition-colors no-underline"
                   onClick={onNavigate}
                 >
-                  <p className="text-[rgba(35,31,35,0.72)] text-[15px]">{item.label}</p>
+                  <p className="text-[rgba(35,31,35,0.72)] text-[14px] leading-[1.5]">{item.label}</p>
                 </Link>
               ))}
             </div>

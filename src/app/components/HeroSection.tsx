@@ -24,7 +24,7 @@ function LogoCarousel() {
       <div className="flex gap-12 sm:gap-20 items-center absolute left-0 top-1/2 -translate-y-1/2 animate-[marquee_20s_linear_infinite]">
         {[...logos, ...logos].map((name, i) => (
           <div key={`${name}-${i}`} className="h-8 shrink-0 flex items-center">
-            <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] whitespace-nowrap tracking-wide" style={{ fontWeight: 400 }}>{name}</p>
+            <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[1.5] whitespace-nowrap tracking-wide" style={{ fontWeight: 400 }}>{name}</p>
           </div>
         ))}
       </div>
@@ -46,7 +46,7 @@ export function HeroSection() {
               <p className="leading-[1.1] text-[#231f23] tracking-[-1px] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px]" style={{ fontWeight: 400 }}>Replicate your marketing team<br className="hidden md:inline" /> <span className="accent-italic">straight from the source.</span></p>
             </AnimatedItem>
             <AnimatedItem delay={0.1}>
-              <p className="leading-[28px] sm:leading-[32px] text-[16px] sm:text-[18px] md:text-[20px] text-[rgba(35,31,35,0.64)] px-0 sm:px-[75px] py-[0px]" style={{ fontWeight: 300 }}>
+              <p className=" text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] text-[rgba(35,31,35,0.64)] px-0 sm:px-[75px] py-[0px]" style={{ fontWeight: 300 }}>
                 SocialPaint is the first AI design system that learns exactly how your marketing team<br className="hidden sm:inline" /> designs and generates content for anyone in your company.
               </p>
             </AnimatedItem>

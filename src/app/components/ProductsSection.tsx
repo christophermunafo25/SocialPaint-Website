@@ -21,7 +21,7 @@ function ProductCard({ tag, tagColor, icon: Icon, title, description }: {
           <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[12px] tracking-[0.75px] uppercase">{tag}</p>
         </div>
         <p className="leading-[28px] sm:leading-[32px] text-[#231f23] font-[Stack_Sans_Headline] text-[24px]" style={{ fontWeight: 400 }}>{title}</p>
-        <p className="leading-[22px] text-[13px] sm:text-[15px] text-[rgba(35,31,35,0.56)]" style={{ fontWeight: 300 }}>{description}</p>
+        <p className=" text-[14px] leading-[1.5] text-[rgba(35,31,35,0.56)]" style={{ fontWeight: 300 }}>{description}</p>
       </div>
     </div>
   );

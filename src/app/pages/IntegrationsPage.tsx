@@ -72,7 +72,7 @@ export function IntegrationsPage() {
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[680px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] max-w-[680px]" style={{ fontWeight: 300 }}>
               SocialPaint plugs into the social platforms, design tools, and marketing apps your team already uses.
             </p>
           </AnimatedItem>
@@ -91,7 +91,7 @@ export function IntegrationsPage() {
                   <item.icon size={16} color="#231f23" />
                 </div>
                 <p className="text-[#f7f6f5] text-[16px] sm:text-[18px]" style={{ fontWeight: 500 }}>{item.title}</p>
-                <p className="text-[rgba(247,246,245,0.64)] text-[14px] leading-[20px]" style={{ fontWeight: 300 }}>{item.desc}</p>
+                <p className="text-[rgba(247,246,245,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -111,7 +111,7 @@ export function IntegrationsPage() {
                   {category.title}
                 </p>
               </div>
-              <p className="text-[rgba(35,31,35,0.48)] text-[14px]" style={{ fontWeight: 300 }}>{category.items.length} integrations</p>
+              <p className="text-[rgba(35,31,35,0.48)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{category.items.length} integrations</p>
             </AnimatedSection>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -128,7 +128,7 @@ export function IntegrationsPage() {
                           <p className="text-[#231f23] text-[16px]" style={{ fontWeight: 500 }}>{item.name}</p>
                         </div>
                       </div>
-                      <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[20px]" style={{ fontWeight: 300 }}>{item.description}</p>
+                      <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{item.description}</p>
                     </div>
                   </AnimatedItem>
                 );
@@ -154,7 +154,7 @@ export function IntegrationsPage() {
                 <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] mb-4">
                   Build custom integrations
                 </p>
-                <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[24px] mb-8 max-w-[400px]" style={{ fontWeight: 300 }}>
+                <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[1.5] mb-8 max-w-[400px]" style={{ fontWeight: 300 }}>
                   Full REST API for generating content, managing brands, and building workflows programmatically.
                 </p>
                 <div className="flex gap-3">

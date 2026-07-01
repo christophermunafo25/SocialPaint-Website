@@ -26,7 +26,7 @@ function ArticleCard({ article }: { article: BlogArticle }) {
             </div>
             <p className="leading-[28px] sm:leading-[32px] text-[#231f23] text-[20px] sm:text-[24px] font-[Stack_Sans_Headline]" style={{ fontWeight: 400 }}>{article.title}</p>
           </div>
-          <p className="text-[13px] text-[rgba(35,31,35,0.64)]" style={{ fontWeight: 300 }}>{article.date}</p>
+          <p className="text-[14px] leading-[1.5] text-[rgba(35,31,35,0.64)]" style={{ fontWeight: 300 }}>{article.date}</p>
         </div>
       </div>
     </div>

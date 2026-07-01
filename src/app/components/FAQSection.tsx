@@ -70,7 +70,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           className="overflow-hidden w-full"
         >
           <div className="pt-4">
-            <p className="leading-[24px] text-[14px] sm:text-[16px] text-[rgba(35,31,35,0.64)]" style={{ fontWeight: 300 }}>{answer}</p>
+            <p className=" text-[14px] sm:text-[16px] leading-[1.5] text-[rgba(35,31,35,0.64)]" style={{ fontWeight: 300 }}>{answer}</p>
           </div>
         </motion.div>
       </div>

@@ -103,7 +103,7 @@ function GenerationFlow() {
             <div className="flex flex-col gap-2 flex-1 pt-1">
               <p className="font-['Fragment_Mono',monospace] text-[rgba(35,31,35,0.32)] text-[11px] tracking-[0.75px] uppercase">{step.step}</p>
               <p className="text-[#231f23] text-[20px] sm:text-[24px] leading-[1.2]" style={{ fontWeight: 400 }}>{step.title}</p>
-              <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[24px] max-w-[600px]" style={{ fontWeight: 300 }}>{step.desc}</p>
+              <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[600px]" style={{ fontWeight: 300 }}>{step.desc}</p>
             </div>
           </AnimatedItem>
         );
@@ -140,7 +140,7 @@ export function ContentStudioPage() {
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[700px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] max-w-[700px]" style={{ fontWeight: 300 }}>
               Generate social posts, ad creatives, stories, carousels, and more — perfectly on-brand, automatically formatted for every platform. Anyone on your team can create.
             </p>
           </AnimatedItem>
@@ -260,7 +260,7 @@ export function ContentStudioPage() {
                 <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15]" style={{ fontWeight: 400 }}>
                   Every team creates. Marketing stays in control.
                 </p>
-                <p className="text-[rgba(35,31,35,0.64)] text-[15px] sm:text-[16px] leading-[26px]" style={{ fontWeight: 300 }}>
+                <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[1.5]" style={{ fontWeight: 300 }}>
                   Sales, recruiting, product, and executive teams can generate on-brand content without waiting on designers or learning new tools. Marketing defines the brand system — everyone else builds from it.
                 </p>
               </div>
@@ -276,7 +276,7 @@ export function ContentStudioPage() {
             <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[600px]" style={{ fontWeight: 400 }}>
               Start creating on-brand content today
             </p>
-            <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[400px]" style={{ fontWeight: 300 }}>
               No design skills required. Your Style DNA powers everything.
             </p>
             <div className="flex gap-3 items-center">

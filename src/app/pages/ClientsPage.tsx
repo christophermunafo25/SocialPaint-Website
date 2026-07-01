@@ -49,7 +49,7 @@ export function ClientsPage() {
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[680px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] max-w-[680px]" style={{ fontWeight: 300 }}>
               From startups to agencies, marketing teams use SocialPaint to create on-brand content at scale.
             </p>
           </AnimatedItem>
@@ -112,7 +112,7 @@ export function ClientsPage() {
                 <div className="flex items-center gap-4">
                   <div>
                     <p className="text-[#f7f6f5] text-[14px] sm:text-[16px]" style={{ fontWeight: 500 }}>{featured.person}</p>
-                    <p className="text-[rgba(247,246,245,0.64)] text-[13px]" style={{ fontWeight: 300 }}>{featured.role}</p>
+                    <p className="text-[rgba(247,246,245,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{featured.role}</p>
                   </div>
                 </div>
                 <Link to="/resources" className="bg-[#f7f6f5] flex gap-2 items-center justify-center px-5 py-3 rounded-lg cursor-pointer no-underline self-start">
@@ -148,18 +148,18 @@ export function ClientsPage() {
                       <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: t.color }}>
                         <Quote size={14} color="#231f23" />
                       </div>
-                      <p className="text-[rgba(35,31,35,0.48)] text-[14px]" style={{ fontWeight: 500 }}>{t.company}</p>
+                      <p className="text-[rgba(35,31,35,0.48)] text-[14px] leading-[1.5]" style={{ fontWeight: 500 }}>{t.company}</p>
                     </div>
                     <div className="px-2.5 py-1 rounded-full bg-[#A7FFAC] shrink-0">
                       <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[10px] tracking-[0.5px] uppercase">{t.stat}</p>
                     </div>
                   </div>
-                  <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[15px] leading-[22px] flex-1 mb-6" style={{ fontWeight: 300 }}>
+                  <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5] flex-1 mb-6" style={{ fontWeight: 300 }}>
                     "{t.quote}"
                   </p>
                   <div className="flex flex-col gap-0.5">
                     <p className="text-[#231f23] text-[14px]" style={{ fontWeight: 500 }}>{t.name}</p>
-                    <p className="text-[rgba(35,31,35,0.48)] text-[13px]" style={{ fontWeight: 300 }}>{t.role}</p>
+                    <p className="text-[rgba(35,31,35,0.48)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{t.role}</p>
                   </div>
                 </div>
               </AnimatedItem>
@@ -175,7 +175,7 @@ export function ClientsPage() {
             <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] lg:text-[40px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] max-w-[600px]">
               Join 500+ teams creating smarter content
             </p>
-            <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[400px]" style={{ fontWeight: 300 }}>
               Join the waitlist for early access — and be among the first to create on-brand content at scale.
             </p>
             <div className="flex gap-3 items-center">

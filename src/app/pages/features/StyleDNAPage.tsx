@@ -62,7 +62,7 @@ function BrandElementCard({ element, index, isActive, onHover }: {
           transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
           className="overflow-hidden"
         >
-          <p className="text-[13px] sm:text-[14px] leading-[1.6] text-[rgba(35,31,35,0.64)]" style={{ fontWeight: 300 }}>{element.description}</p>
+          <p className="text-[14px] leading-[1.5] text-[rgba(35,31,35,0.64)]" style={{ fontWeight: 300 }}>{element.description}</p>
         </motion.div>
       </motion.div>
     </AnimatedItem>
@@ -125,7 +125,7 @@ export function StyleDNAPage() {
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[700px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] max-w-[700px]" style={{ fontWeight: 300 }}>
               SocialPaint connects to your design tools and learns everything about your brand — colors, type, spacing, tone, imagery — creating a living profile that powers every piece of content.
             </p>
           </AnimatedItem>
@@ -190,7 +190,7 @@ export function StyleDNAPage() {
                   <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[16px] tracking-[0.75px]">{item.step}</p>
                 </div>
                 <p className="text-[#f7f6f5] text-[20px] sm:text-[24px] leading-[1.2]" style={{ fontWeight: 400 }}>{item.title}</p>
-                <p className="text-[rgba(247,246,245,0.5)] text-[14px] sm:text-[15px] leading-[1.6]" style={{ fontWeight: 300 }}>{item.desc}</p>
+                <p className="text-[rgba(247,246,245,0.5)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{item.desc}</p>
               </AnimatedItem>
             ))}
           </div>
@@ -210,7 +210,7 @@ export function StyleDNAPage() {
                 <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15]" style={{ fontWeight: 400 }}>
                   Not a PDF. A living, learning brand profile.
                 </p>
-                <p className="text-[rgba(35,31,35,0.64)] text-[15px] sm:text-[16px] leading-[26px]" style={{ fontWeight: 300 }}>
+                <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[1.5]" style={{ fontWeight: 300 }}>
                   Traditional brand guidelines are static documents that go stale the moment they're published. Style DNA is different — it observes your team's ongoing design decisions and evolves alongside your brand. When your team shifts a color palette or introduces a new type treatment, Style DNA picks it up automatically.
                 </p>
                 <div className="flex flex-col gap-3 mt-2">
@@ -250,7 +250,7 @@ export function StyleDNAPage() {
       <section className="px-4 sm:px-8 pb-12">
         <AnimatedItem className="w-full max-w-[1240px] mx-auto">
           <div className="bg-[#ececec] rounded-[20px] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
-            <p className="text-[rgba(35,31,35,0.48)] text-[14px]" style={{ fontWeight: 300 }}>Connects with</p>
+            <p className="text-[rgba(35,31,35,0.48)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>Connects with</p>
             {INTEGRATIONS.map((tool) => {
               const Icon = tool.icon;
               return (
@@ -271,7 +271,7 @@ export function StyleDNAPage() {
             <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[600px]" style={{ fontWeight: 400 }}>
               Ready to decode your brand?
             </p>
-            <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[400px]" style={{ fontWeight: 300 }}>
               Connect your design tools and see your Style DNA in minutes.
             </p>
             <div className="flex gap-3 items-center">

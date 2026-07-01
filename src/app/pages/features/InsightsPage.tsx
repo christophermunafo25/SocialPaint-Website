@@ -164,7 +164,7 @@ function RecommendationCard({ rec, index }: { rec: typeof RECOMMENDATIONS[number
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
               className="overflow-hidden">
               <div className="pt-4 pl-14">
-                <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[22px]" style={{ fontWeight: 300 }}>{rec.detail}</p>
+                <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{rec.detail}</p>
               </div>
             </motion.div>
           )}
@@ -199,7 +199,7 @@ export function InsightsPage() {
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[700px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] max-w-[700px]" style={{ fontWeight: 300 }}>
               Track content performance across every platform. See which formats, styles, and timing drive the most engagement — and let AI optimize your strategy.
             </p>
           </AnimatedItem>
@@ -234,7 +234,7 @@ export function InsightsPage() {
             <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[680px]" style={{ fontWeight: 400 }}>
               Actionable insights, not just dashboards
             </p>
-            <p className="text-[rgba(35,31,35,0.64)] text-[15px] sm:text-[16px] leading-[26px] max-w-[640px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[640px]" style={{ fontWeight: 300 }}>
               SocialPaint doesn't just show you numbers. It tells you exactly what to do — what to post, when, where, and how.
             </p>
           </AnimatedSection>
@@ -256,7 +256,7 @@ export function InsightsPage() {
                 <p className="text-[#f7f6f5] text-[28px] sm:text-[36px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15]" style={{ fontWeight: 400 }}>
                   Find your audience's sweet spot
                 </p>
-                <p className="text-[rgba(247,246,245,0.5)] text-[15px] sm:text-[16px] leading-[26px]" style={{ fontWeight: 300 }}>
+                <p className="text-[rgba(247,246,245,0.5)] text-[14px] sm:text-[16px] leading-[1.5]" style={{ fontWeight: 300 }}>
                   The engagement heatmap shows exactly when your audience is most active and responsive. Stop guessing posting times — use data.
                 </p>
                 <div className="flex flex-col gap-3 mt-2">
@@ -267,7 +267,7 @@ export function InsightsPage() {
                   ].map((item) => (
                     <div key={item.label} className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: item.color }} />
-                      <p className="text-[rgba(247,246,245,0.48)] text-[13px]" style={{ fontWeight: 300 }}>{item.label}</p>
+                      <p className="text-[rgba(247,246,245,0.48)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{item.label}</p>
                       <p className="text-[#f7f6f5] text-[13px] ml-auto" style={{ fontWeight: 400 }}>{item.value}</p>
                     </div>
                   ))}
@@ -340,7 +340,7 @@ export function InsightsPage() {
             <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[600px]" style={{ fontWeight: 400 }}>
               Stop guessing. Start knowing.
             </p>
-            <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[400px]" style={{ fontWeight: 300 }}>
               AI-powered insights that tell you exactly what to do next.
             </p>
             <div className="flex gap-3 items-center">

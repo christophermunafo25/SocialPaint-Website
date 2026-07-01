@@ -204,7 +204,7 @@ export function SmartTemplatesPage() {
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[700px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] max-w-[700px]" style={{ fontWeight: 300 }}>
               A library of templates that automatically adapt to your brand. Every template respects your Style DNA — so anyone can create professional content without design skills.
             </p>
           </AnimatedItem>
@@ -260,7 +260,7 @@ export function SmartTemplatesPage() {
             <p className="text-[#f7f6f5] text-[28px] sm:text-[40px] lg:text-[48px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.1] max-w-[720px] mx-auto mb-4" style={{ fontWeight: 400 }}>
               One template, infinite brands
             </p>
-            <p className="text-[rgba(247,246,245,0.5)] text-[15px] sm:text-[16px] leading-[26px] max-w-[600px] mx-auto" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(247,246,245,0.5)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[600px] mx-auto" style={{ fontWeight: 300 }}>
               Watch the same template transform to match completely different brand identities — automatically.
             </p>
           </AnimatedSection>
@@ -288,7 +288,7 @@ export function SmartTemplatesPage() {
                       <Icon size={20} color="#231f23" />
                     </div>
                     <p className="text-[#231f23] text-[16px] mb-2" style={{ fontWeight: 400 }}>{feature.title}</p>
-                    <p className="text-[rgba(35,31,35,0.48)] text-[14px] leading-[20px]" style={{ fontWeight: 300 }}>{feature.desc}</p>
+                    <p className="text-[rgba(35,31,35,0.48)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{feature.desc}</p>
                   </div>
                 </AnimatedItem>
               );
@@ -304,7 +304,7 @@ export function SmartTemplatesPage() {
             <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[600px]" style={{ fontWeight: 400 }}>
               200+ templates that already know your brand
             </p>
-            <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[400px]" style={{ fontWeight: 300 }}>
               Pick a template, click once, and it adapts to your Style DNA.
             </p>
             <div className="flex gap-3 items-center">

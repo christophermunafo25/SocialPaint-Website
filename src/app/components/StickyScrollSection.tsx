@@ -56,7 +56,7 @@ function FeaturePanel({ tag, tagColor, iconPath, icon, title, description, butto
         {/* Text */}
         <div className="flex flex-col gap-4 lg:gap-5 items-start w-full">
           <p className="leading-[1.2] text-[#231f23] text-[28px] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] w-full font-[Stack_Sans_Headline]" style={{ fontWeight: 400 }}>{title}</p>
-          <p className="leading-[24px] text-[14px] sm:text-[16px] text-[rgba(35,31,35,0.64)] w-full" style={{ fontWeight: 300 }}>{description}</p>
+          <p className=" text-[14px] sm:text-[16px] leading-[1.5] text-[rgba(35,31,35,0.64)] w-full" style={{ fontWeight: 300 }}>{description}</p>
         </div>
         {/* Button */}
         <Link to={buttonPath} className="backdrop-blur-[8px] bg-[rgba(35,31,35,0.08)] flex gap-2 items-center justify-center px-5 py-3 rounded-lg cursor-pointer no-underline">
@@ -190,7 +190,7 @@ function InsightsCard() {
               </div>
               <div className="flex-1 flex flex-col gap-1">
                 <p className="text-[#f7f6f5] text-[16px]" style={{ fontWeight: 300 }}>{item.title}</p>
-                <p className="text-[13px] text-[rgba(247,246,245,0.64)]" style={{ fontWeight: 300 }}>{item.desc}</p>
+                <p className="text-[14px] leading-[1.5] text-[rgba(247,246,245,0.64)]" style={{ fontWeight: 300 }}>{item.desc}</p>
               </div>
             </div>
           ))}

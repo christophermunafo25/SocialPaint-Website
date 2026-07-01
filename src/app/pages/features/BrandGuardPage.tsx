@@ -131,7 +131,7 @@ export function BrandGuardPage() {
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[700px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] max-w-[700px]" style={{ fontWeight: 300 }}>
               Every piece of content passes through automated brand checks before it goes live. Off-brand colors, wrong fonts, tone mismatches — caught and fixed automatically.
             </p>
           </AnimatedItem>
@@ -165,7 +165,7 @@ export function BrandGuardPage() {
                 <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15]" style={{ fontWeight: 400 }}>
                   Every detail, checked in under a second
                 </p>
-                <p className="text-[rgba(35,31,35,0.64)] text-[15px] sm:text-[16px] leading-[26px]" style={{ fontWeight: 300 }}>
+                <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[1.5]" style={{ fontWeight: 300 }}>
                   Brand Guard compares every asset against your Style DNA — colors, fonts, spacing, tone, imagery, and logo usage. Issues are flagged with specific, actionable fixes. Not vague warnings.
                 </p>
               </div>
@@ -200,7 +200,7 @@ export function BrandGuardPage() {
                       <Icon size={18} color="#231f23" />
                     </div>
                     <p className="text-[#f7f6f5] text-[16px] sm:text-[18px]" style={{ fontWeight: 400 }}>{feature.title}</p>
-                    <p className="text-[rgba(247,246,245,0.5)] text-[14px] leading-[1.6]" style={{ fontWeight: 300 }}>{feature.desc}</p>
+                    <p className="text-[rgba(247,246,245,0.5)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{feature.desc}</p>
                   </motion.div>
                 </AnimatedItem>
               );
@@ -232,7 +232,7 @@ export function BrandGuardPage() {
                       <div className="w-4 h-4 rounded-full bg-[#FFC5B0] flex items-center justify-center shrink-0 mt-0.5">
                         <X size={8} color="#231f23" strokeWidth={3} />
                       </div>
-                      <p className="text-[rgba(35,31,35,0.64)] text-[13px] sm:text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{issue}</p>
+                      <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{issue}</p>
                     </div>
                   ))}
                 </div>
@@ -252,7 +252,7 @@ export function BrandGuardPage() {
                       <div className="w-4 h-4 rounded-full bg-[#A7FFAC] flex items-center justify-center shrink-0 mt-0.5">
                         <Check size={8} color="#231f23" strokeWidth={3} />
                       </div>
-                      <p className="text-[rgba(35,31,35,0.64)] text-[13px] sm:text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{fix}</p>
+                      <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{fix}</p>
                     </div>
                   ))}
                 </div>
@@ -269,7 +269,7 @@ export function BrandGuardPage() {
             <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[600px]" style={{ fontWeight: 400 }}>
               Never publish off-brand content again
             </p>
-            <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[400px]" style={{ fontWeight: 300 }}>
               Brand Guard checks everything automatically. Zero manual reviews.
             </p>
             <div className="flex gap-3 items-center">

@@ -21,9 +21,9 @@ function TestimonialCard({ data }: { data: TestimonialData }) {
     <div className="bg-white flex flex-col h-auto min-h-[280px] sm:h-[320px] items-center justify-between overflow-clip p-6 sm:p-8 rounded-[20px] shrink-0 w-full sm:w-[564px]">
       <div className="flex flex-col gap-6 sm:gap-8 items-start w-full">
         <div className="h-8 flex items-center">
-          <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] tracking-[-0.5px]" style={{ fontWeight: 400 }}>{data.company}</p>
+          <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] tracking-[-0.5px]" style={{ fontWeight: 400 }}>{data.company}</p>
         </div>
-        <p className="leading-[24px] text-[14px] sm:text-[16px] text-[rgba(35,31,35,0.64)] w-full" style={{ fontWeight: 300 }}>
+        <p className=" text-[14px] sm:text-[16px] leading-[1.5] text-[rgba(35,31,35,0.64)] w-full" style={{ fontWeight: 300 }}>
           {data.quote}
         </p>
       </div>
@@ -33,7 +33,7 @@ function TestimonialCard({ data }: { data: TestimonialData }) {
         </div>
         <div className="flex-1 flex flex-col gap-1">
           <p className="text-[#231f23] text-[14px] sm:text-[16px]" style={{ fontWeight: 400 }}>{data.name}</p>
-          <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px]" style={{ fontWeight: 300 }}>{data.role}</p>
+          <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[1.5]" style={{ fontWeight: 300 }}>{data.role}</p>
         </div>
       </div>
     </div>

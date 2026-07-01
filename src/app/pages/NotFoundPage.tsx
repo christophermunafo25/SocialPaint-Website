@@ -16,7 +16,7 @@ export function NotFoundPage() {
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[600px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] max-w-[600px]" style={{ fontWeight: 300 }}>
               The page you're looking for doesn't exist or has been moved. Let's get you back on track.
             </p>
           </AnimatedItem>

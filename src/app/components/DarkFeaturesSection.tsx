@@ -130,7 +130,7 @@ function InteractiveCard({
           </p>
 
           {/* Description */}
-          <p className="text-[14px] sm:text-[15px] leading-[1.6] text-[rgba(247,246,245,0.5)]" style={{ fontWeight: 300 }}>
+          <p className="text-[14px] leading-[1.5] text-[rgba(247,246,245,0.5)]" style={{ fontWeight: 300 }}>
             {card.description}
           </p>
 

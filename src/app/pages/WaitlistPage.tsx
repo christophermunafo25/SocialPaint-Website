@@ -29,7 +29,7 @@ export function WaitlistPage() {
           </p>
         </AnimatedItem>
         <AnimatedItem delay={0.2}>
-          <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[640px]" style={{ fontWeight: 300 }}>
+          <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] max-w-[640px]" style={{ fontWeight: 300 }}>
             Be among the first to turn your brand into a living content system. We'll notify you when early access opens.
           </p>
         </AnimatedItem>
@@ -118,7 +118,7 @@ export function WaitlistPage() {
             <p className="text-[#231f23] text-[24px] sm:text-[28px] tracking-[-0.5px]" style={{ fontWeight: 500 }}>
               You're on the list!
             </p>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] leading-[24px] max-w-[360px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[360px]" style={{ fontWeight: 300 }}>
               Thanks for signing up, {name.split(' ')[0]}. We'll reach out to <span style={{ fontWeight: 500 }}>{email}</span> when early access opens.
             </p>
           </div>

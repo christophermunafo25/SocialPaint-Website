@@ -46,7 +46,7 @@ function FooterLinks() {
     <div className="flex flex-col sm:flex-row gap-8 sm:gap-4 items-start">
       {sections.map((section) => (
         <div key={section.title} className="flex flex-col gap-4 sm:gap-5 items-start w-full sm:w-[216px]">
-          <p className="text-[13px] text-[rgba(35,31,35,0.64)]" style={{ fontWeight: 300 }}>{section.title}</p>
+          <p className="text-[14px] leading-[1.5] text-[rgba(35,31,35,0.64)]" style={{ fontWeight: 300 }}>{section.title}</p>
           <div className="flex flex-col gap-3 sm:gap-2 items-start w-full">
             {section.links.map((link) => (
               <Link key={link.label} to={link.path} className="text-[#231f23] text-[14px] sm:text-[16px] hover:opacity-70 transition-opacity no-underline py-1 sm:py-0" style={{ fontWeight: 300 }}>{link.label}</Link>

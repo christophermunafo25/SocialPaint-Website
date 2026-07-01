@@ -86,7 +86,7 @@ export function PricingPage() {
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[680px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[1.5] max-w-[680px]" style={{ fontWeight: 300 }}>
               Start free and scale as your team grows. Every plan includes Style DNA.
             </p>
           </AnimatedItem>
@@ -173,7 +173,7 @@ export function PricingPage() {
             ].map((item) => (
               <div key={item.text} className="flex items-center gap-2">
                 <item.icon size={16} color="rgba(35,31,35,0.48)" />
-                <p className="text-[rgba(35,31,35,0.64)] text-[14px]" style={{ fontWeight: 300 }}>{item.text}</p>
+                <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{item.text}</p>
               </div>
             ))}
           </div>
@@ -252,7 +252,7 @@ export function PricingPage() {
                     className="overflow-hidden"
                   >
                     <div className="px-5 sm:px-6 pb-5 sm:pb-6">
-                      <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[24px]" style={{ fontWeight: 300 }}>{faq.a}</p>
+                      <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[1.5]" style={{ fontWeight: 300 }}>{faq.a}</p>
                     </div>
                   </motion.div>
                 </div>
