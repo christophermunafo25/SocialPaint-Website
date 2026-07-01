@@ -148,7 +148,7 @@ function AdaptationDemo() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.96 }}
           transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-          className="w-full max-w-[480px] mx-auto">
+          className="w-full max-w-[600px] mx-auto">
           <div className="rounded-[20px] overflow-hidden" style={{ backgroundColor: brand.bg }}>
             <div className="p-6 sm:p-8">
               {/* Mock social post */}
@@ -199,12 +199,12 @@ export function SmartTemplatesPage() {
             </div>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] text-[36px] font-[Stack_Sans_Headline] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[760px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] text-[36px] font-[Stack_Sans_Headline] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[880px]" style={{ fontWeight: 400 }}>
               Start fast,<br className="hidden sm:inline" /> <span className="accent-italic">stay on-brand</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[580px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[700px]" style={{ fontWeight: 300 }}>
               A library of templates that automatically adapt to your brand. Every template respects your Style DNA — so anyone can create professional content without design skills.
             </p>
           </AnimatedItem>
@@ -237,14 +237,14 @@ export function SmartTemplatesPage() {
 
       {/* ───── Template Gallery — Tabbed ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="flex flex-col gap-6 items-start mb-10 md:mb-12">
             <div className="flex gap-2 items-center px-3 py-2 rounded-lg relative">
               <div aria-hidden="true" className="absolute border border-[rgba(35,31,35,0.08)] border-solid inset-0 pointer-events-none rounded-lg" />
               <div className="bg-[#FFC5B0] rounded-[2px] shrink-0 size-[10px]" />
               <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[12px] tracking-[0.75px] uppercase">Browse templates</p>
             </div>
-            <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[560px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[680px]" style={{ fontWeight: 400 }}>
               Find the right starting point, instantly
             </p>
           </AnimatedSection>
@@ -255,12 +255,12 @@ export function SmartTemplatesPage() {
 
       {/* ───── Brand Adaptation Demo ───── */}
       <section className="bg-[#1a171a] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px] rounded-[20px] max-w-[1440px] mx-auto">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="mb-12 md:mb-16 text-center">
-            <p className="text-[#f7f6f5] text-[28px] sm:text-[36px] font-[Stack_Sans_Headline] lg:text-[48px] tracking-[-0.5px] leading-[1.1] max-w-[600px] mx-auto mb-4" style={{ fontWeight: 400 }}>
+            <p className="text-[#f7f6f5] text-[28px] sm:text-[36px] font-[Stack_Sans_Headline] lg:text-[48px] tracking-[-0.5px] leading-[1.1] max-w-[720px] mx-auto mb-4" style={{ fontWeight: 400 }}>
               One template, infinite brands
             </p>
-            <p className="text-[rgba(247,246,245,0.5)] text-[15px] sm:text-[16px] leading-[26px] max-w-[480px] mx-auto" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(247,246,245,0.5)] text-[15px] sm:text-[16px] leading-[26px] max-w-[600px] mx-auto" style={{ fontWeight: 300 }}>
               Watch the same template transform to match completely different brand identities — automatically.
             </p>
           </AnimatedSection>
@@ -271,9 +271,9 @@ export function SmartTemplatesPage() {
 
       {/* ───── Features Grid ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="flex flex-col gap-6 items-start mb-10 md:mb-12">
-            <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[560px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[680px]" style={{ fontWeight: 400 }}>
               Smart templates, not static files
             </p>
           </AnimatedSection>
@@ -299,9 +299,9 @@ export function SmartTemplatesPage() {
 
       {/* ───── Bottom CTA ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <AnimatedSection className="w-full max-w-[1100px] mx-auto">
+        <AnimatedSection className="w-full max-w-[1240px] mx-auto">
           <div className="bg-[#231f23] rounded-[20px] p-8 sm:p-12 lg:p-16 flex flex-col items-center text-center gap-6">
-            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[480px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[600px]" style={{ fontWeight: 400 }}>
               200+ templates that already know your brand
             </p>
             <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>

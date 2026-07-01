@@ -24,18 +24,18 @@ export function WaitlistPage() {
           </div>
         </AnimatedItem>
         <AnimatedItem delay={0.1}>
-          <p className="leading-[1.1] text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] lg:text-[56px] tracking-[-1px] max-w-[720px]" style={{ fontWeight: 400 }}>
+          <p className="leading-[1.1] text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] lg:text-[56px] tracking-[-1px] max-w-[840px]" style={{ fontWeight: 400 }}>
             Join the <span className="accent-italic">waitlist</span>
           </p>
         </AnimatedItem>
         <AnimatedItem delay={0.2}>
-          <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[520px]" style={{ fontWeight: 300 }}>
+          <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[640px]" style={{ fontWeight: 300 }}>
             Be among the first to turn your brand into a living content system. We'll notify you when early access opens.
           </p>
         </AnimatedItem>
       </AnimatedSection>
 
-      <AnimatedItem delay={0.3} className="w-full max-w-[520px] mx-auto">
+      <AnimatedItem delay={0.3} className="w-full max-w-[640px] mx-auto">
         {!submitted ? (
           <form onSubmit={handleSubmit} className="flex flex-col gap-5 bg-white rounded-[20px] p-6 sm:p-8 border border-[rgba(35,31,35,0.08)]">
             <div className="flex flex-col gap-1.5">

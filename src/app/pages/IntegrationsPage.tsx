@@ -67,19 +67,19 @@ export function IntegrationsPage() {
             </div>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[800px]" style={{ fontWeight: 400 }}>
               Connects to your entire <span className="accent-italic">content stack</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[560px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[680px]" style={{ fontWeight: 300 }}>
               Socialpaint plugs into the social platforms, design tools, and marketing apps your team already uses.
             </p>
           </AnimatedItem>
         </AnimatedSection>
 
         {/* How integrations work strip */}
-        <AnimatedItem delay={0.3} className="w-full max-w-[1100px] mx-auto">
+        <AnimatedItem delay={0.3} className="w-full max-w-[1240px] mx-auto">
           <div className="bg-[#231f23] rounded-[20px] p-6 sm:p-8 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
             {[
               { icon: Plug, title: 'Connect once', desc: 'OAuth or API key — setup takes under 2 minutes per tool.', color: '#A7FFAC' },
@@ -101,7 +101,7 @@ export function IntegrationsPage() {
       {/* ───── Categorized Integration Sections ───── */}
       {categories.map((category, ci) => (
         <section key={category.title} className={`px-4 sm:px-8 py-16 sm:py-20 ${ci % 2 === 1 ? 'bg-[#ececec]' : ''}`}>
-          <div className="max-w-[1100px] mx-auto">
+          <div className="max-w-[1240px] mx-auto">
             <AnimatedSection className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 md:mb-12">
               <div className="flex flex-col gap-4 items-start">
                 <div className="flex gap-2 items-center px-3 py-1.5 rounded-lg" style={{ backgroundColor: category.tagColor }}>
@@ -140,7 +140,7 @@ export function IntegrationsPage() {
 
       {/* ───── API CTA ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedSection>
             <div className="bg-[#231f23] rounded-[20px] overflow-hidden flex flex-col lg:flex-row">
               {/* Left: code block */}

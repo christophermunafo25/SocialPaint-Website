@@ -49,7 +49,7 @@ function PlatformShowcase() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: -10 }}
           transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-          className="w-full max-w-[480px]">
+          className="w-full max-w-[600px]">
           <div className="bg-[#ececec] rounded-[20px] p-4 sm:p-6">
             <div className={`${platform.aspect} max-h-[400px] rounded-xl overflow-hidden relative`}
               style={{ backgroundColor: platform.color }}>
@@ -103,7 +103,7 @@ function GenerationFlow() {
             <div className="flex flex-col gap-2 flex-1 pt-1">
               <p className="font-['Fragment_Mono',monospace] text-[rgba(35,31,35,0.32)] text-[11px] tracking-[0.75px] uppercase">{step.step}</p>
               <p className="text-[#231f23] text-[20px] sm:text-[24px] leading-[1.2]" style={{ fontWeight: 400 }}>{step.title}</p>
-              <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[24px] max-w-[480px]" style={{ fontWeight: 300 }}>{step.desc}</p>
+              <p className="text-[rgba(35,31,35,0.64)] text-[14px] sm:text-[16px] leading-[24px] max-w-[600px]" style={{ fontWeight: 300 }}>{step.desc}</p>
             </div>
           </AnimatedItem>
         );
@@ -135,12 +135,12 @@ export function ContentStudioPage() {
             </div>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] text-[36px] font-[Stack_Sans_Headline] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[760px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] text-[36px] font-[Stack_Sans_Headline] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[880px]" style={{ fontWeight: 400 }}>
               Create anything,<br className="hidden sm:inline" /> <span className="accent-italic">always on-brand</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[580px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[700px]" style={{ fontWeight: 300 }}>
               Generate social posts, ad creatives, stories, carousels, and more — perfectly on-brand, automatically formatted for every platform. Anyone on your team can create.
             </p>
           </AnimatedItem>
@@ -180,14 +180,14 @@ export function ContentStudioPage() {
 
       {/* ───── Generation Flow ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <div className="max-w-[720px] mx-auto">
+        <div className="max-w-[840px] mx-auto">
           <AnimatedSection className="flex flex-col gap-6 items-start mb-8 md:mb-12">
             <div className="flex gap-2 items-center px-3 py-2 rounded-lg relative">
               <div aria-hidden="true" className="absolute border border-[rgba(35,31,35,0.08)] border-solid inset-0 pointer-events-none rounded-lg" />
               <div className="bg-[#A7FFAC] rounded-[2px] shrink-0 size-[10px]" />
               <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[12px] tracking-[0.75px] uppercase">How it works</p>
             </div>
-            <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[520px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[640px]" style={{ fontWeight: 400 }}>
               From brief to published in four steps
             </p>
           </AnimatedSection>
@@ -198,9 +198,9 @@ export function ContentStudioPage() {
 
       {/* ───── Content Types — Dark Bento Grid ───── */}
       <section className="bg-[#1a171a] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px] rounded-[20px] max-w-[1440px] mx-auto">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="mb-12 md:mb-16 text-center">
-            <p className="text-[#f7f6f5] text-[28px] sm:text-[36px] font-[Stack_Sans_Headline] lg:text-[48px] tracking-[-0.5px] leading-[1.1] max-w-[560px] mx-auto" style={{ fontWeight: 400 }}>
+            <p className="text-[#f7f6f5] text-[28px] sm:text-[36px] font-[Stack_Sans_Headline] lg:text-[48px] tracking-[-0.5px] leading-[1.1] max-w-[680px] mx-auto" style={{ fontWeight: 400 }}>
               Every content type your team needs
             </p>
           </AnimatedSection>
@@ -226,9 +226,9 @@ export function ContentStudioPage() {
 
       {/* ───── Team Scaling Section ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-            <AnimatedItem className="flex-1 w-full max-w-[480px] order-2 lg:order-1">
+            <AnimatedItem className="flex-1 w-full max-w-[600px] order-2 lg:order-1">
               <div className="bg-[#ececec] rounded-[20px] p-6 sm:p-8">
                 <div className="flex flex-col gap-3">
                   {[
@@ -271,9 +271,9 @@ export function ContentStudioPage() {
 
       {/* ───── Bottom CTA ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <AnimatedSection className="w-full max-w-[1100px] mx-auto">
+        <AnimatedSection className="w-full max-w-[1240px] mx-auto">
           <div className="bg-[#231f23] rounded-[20px] p-8 sm:p-12 lg:p-16 flex flex-col items-center text-center gap-6">
-            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[480px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[600px]" style={{ fontWeight: 400 }}>
               Start creating on-brand content today
             </p>
             <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>

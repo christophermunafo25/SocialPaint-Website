@@ -72,12 +72,12 @@ export function ResourcesPage() {
             </div>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[800px]" style={{ fontWeight: 400 }}>
               Learn, build, and <span className="accent-italic">scale your content</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[560px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[680px]" style={{ fontWeight: 300 }}>
               Guides, tutorials, case studies, and everything you need to get the most out of Socialpaint.
             </p>
           </AnimatedItem>
@@ -86,7 +86,7 @@ export function ResourcesPage() {
 
       {/* ───── Featured Article ───── */}
       <section className="px-4 sm:px-8 pb-16 md:pb-20">
-        <AnimatedSection className="w-full max-w-[1100px] mx-auto">
+        <AnimatedSection className="w-full max-w-[1240px] mx-auto">
           <div className="bg-[#ececec] rounded-[20px] overflow-hidden flex flex-col lg:flex-row">
             <div className="relative h-[240px] lg:h-auto lg:w-[480px] shrink-0">
               <ImageWithFallback
@@ -117,7 +117,7 @@ export function ResourcesPage() {
 
       {/* ───── Guides & Getting Started ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="flex flex-col gap-4 items-start mb-10 md:mb-12">
             <div className="flex gap-2 items-center px-3 py-2 rounded-lg relative">
               <div aria-hidden="true" className="absolute border border-[rgba(35,31,35,0.08)] border-solid inset-0 pointer-events-none rounded-lg" />
@@ -140,7 +140,7 @@ export function ResourcesPage() {
 
       {/* ───── Developer Section (Dark) ───── */}
       <section className="bg-[#231f23] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[100px]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="flex flex-col gap-4 items-start mb-10 md:mb-12">
             <div className="flex gap-2 items-center">
               <div className="flex items-center p-2 rounded-lg bg-[#A6CEFF]">
@@ -176,7 +176,7 @@ export function ResourcesPage() {
 
       {/* ───── Blog & News ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 md:mb-12">
             <div className="flex flex-col gap-4 items-start">
               <div className="flex gap-2 items-center px-3 py-2 rounded-lg relative">
@@ -201,7 +201,7 @@ export function ResourcesPage() {
 
       {/* ───── Newsletter CTA ───── */}
       <section className="px-4 sm:px-8 pb-16 sm:pb-20 lg:pb-[120px]">
-        <AnimatedSection className="w-full max-w-[680px] mx-auto">
+        <AnimatedSection className="w-full max-w-[800px] mx-auto">
           <div className="bg-[#231f23] rounded-[20px] p-8 sm:p-12 flex flex-col items-center text-center gap-6">
             <div className="w-12 h-12 rounded-full bg-[rgba(247,246,245,0.08)] flex items-center justify-center">
               <Mail size={22} color="#f7f6f5" />

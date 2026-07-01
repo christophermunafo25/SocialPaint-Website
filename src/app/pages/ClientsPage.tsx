@@ -44,19 +44,19 @@ export function ClientsPage() {
             </div>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[800px]" style={{ fontWeight: 400 }}>
               Teams that <span className="accent-italic">ship smarter</span> choose Socialpaint
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[560px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[680px]" style={{ fontWeight: 300 }}>
               From startups to agencies, marketing teams use Socialpaint to create on-brand content at scale.
             </p>
           </AnimatedItem>
         </AnimatedSection>
 
         {/* Stats bar */}
-        <AnimatedItem delay={0.3} className="w-full max-w-[1100px] mx-auto">
+        <AnimatedItem delay={0.3} className="w-full max-w-[1240px] mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {heroStats.map((stat) => {
               const Icon = stat.icon;
@@ -74,7 +74,7 @@ export function ClientsPage() {
 
       {/* ───── Logo Cloud ───── */}
       <section className="px-4 sm:px-8 pb-8">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedItem className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 py-8">
             {logos.map((name) => (
               <p key={name} className="text-[rgba(35,31,35,0.32)] text-[14px] sm:text-[16px] tracking-wide whitespace-nowrap" style={{ fontWeight: 500 }}>{name}</p>
@@ -85,7 +85,7 @@ export function ClientsPage() {
 
       {/* ───── Featured Case Study ───── */}
       <section className="px-4 sm:px-8 py-8 sm:py-12">
-        <AnimatedSection className="w-full max-w-[1100px] mx-auto">
+        <AnimatedSection className="w-full max-w-[1240px] mx-auto">
           <div className="rounded-[20px] overflow-hidden relative h-[480px] sm:h-[560px] lg:h-[600px]">
             <ImageWithFallback
               src={featured.image}
@@ -105,7 +105,7 @@ export function ClientsPage() {
                 </div>
               </div>
               {/* Bottom */}
-              <div className="flex flex-col gap-6 max-w-[600px]">
+              <div className="flex flex-col gap-6 max-w-[720px]">
                 <p className="text-[#f7f6f5] text-[18px] sm:text-[20px] lg:text-[24px] leading-[1.4]" style={{ fontWeight: 300 }}>
                   "{featured.quote}"
                 </p>
@@ -127,14 +127,14 @@ export function ClientsPage() {
 
       {/* ───── Testimonials Grid ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="flex flex-col gap-6 items-start mb-12 md:mb-16">
             <div className="flex gap-2 items-center px-3 py-2 rounded-lg relative">
               <div aria-hidden="true" className="absolute border border-[rgba(35,31,35,0.08)] border-solid inset-0 pointer-events-none rounded-lg" />
               <div className="bg-[#ed7472] rounded-[2px] shrink-0 size-[10px]" />
               <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[12px] tracking-[0.75px] uppercase">Testimonials</p>
             </div>
-            <p className="text-[#231f23] text-[28px] sm:text-[36px] lg:text-[40px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] max-w-[560px]">
+            <p className="text-[#231f23] text-[28px] sm:text-[36px] lg:text-[40px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] max-w-[680px]">
               What our clients say
             </p>
           </AnimatedSection>
@@ -170,9 +170,9 @@ export function ClientsPage() {
 
       {/* ───── Bottom CTA ───── */}
       <section className="px-4 sm:px-8 pb-16 sm:pb-20 lg:pb-[120px]">
-        <AnimatedSection className="w-full max-w-[1100px] mx-auto">
+        <AnimatedSection className="w-full max-w-[1240px] mx-auto">
           <div className="bg-[#231f23] rounded-[20px] p-8 sm:p-12 lg:p-16 flex flex-col items-center text-center gap-6">
-            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] lg:text-[40px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] max-w-[480px]">
+            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] lg:text-[40px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] max-w-[600px]">
               Join 500+ teams creating smarter content
             </p>
             <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>

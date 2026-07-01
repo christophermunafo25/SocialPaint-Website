@@ -53,7 +53,7 @@ function EngagementHeatmap() {
   const [hoveredCell, setHoveredCell] = useState<{ day: number; hour: number } | null>(null);
 
   return (
-    <div className="w-full max-w-[600px]">
+    <div className="w-full max-w-[720px]">
       {/* Hour headers */}
       <div className="flex mb-2 pl-[52px]">
         {HOURS.map((h) => (
@@ -194,12 +194,12 @@ export function InsightsPage() {
             </div>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] text-[36px] font-[Stack_Sans_Headline] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[760px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] text-[36px] font-[Stack_Sans_Headline] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[880px]" style={{ fontWeight: 400 }}>
               Know what's working<br className="hidden sm:inline" /> <span className="accent-italic">and why</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[580px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[700px]" style={{ fontWeight: 300 }}>
               Track content performance across every platform. See which formats, styles, and timing drive the most engagement — and let AI optimize your strategy.
             </p>
           </AnimatedItem>
@@ -214,7 +214,7 @@ export function InsightsPage() {
         </AnimatedSection>
 
         {/* Dashboard Metrics Grid */}
-        <div className="w-full max-w-[1100px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="w-full max-w-[1240px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4">
           <MetricCard label="Total Reach" value="284K" change="+23%" positive={true} color="#A7FFAC" delay={0.35} />
           <MetricCard label="Engagement" value="4.8%" change="+0.6%" positive={true} color="#A6CEFF" delay={0.4} />
           <MetricCard label="Brand Score" value="96" change="+3pts" positive={true} color="#CDBCFF" delay={0.45} />
@@ -231,10 +231,10 @@ export function InsightsPage() {
               <div className="bg-[#FFED8C] rounded-[2px] shrink-0 size-[10px]" />
               <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[12px] tracking-[0.75px] uppercase">AI Recommendations</p>
             </div>
-            <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[560px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[680px]" style={{ fontWeight: 400 }}>
               Actionable insights, not just dashboards
             </p>
-            <p className="text-[rgba(35,31,35,0.64)] text-[15px] sm:text-[16px] leading-[26px] max-w-[520px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[15px] sm:text-[16px] leading-[26px] max-w-[640px]" style={{ fontWeight: 300 }}>
               Socialpaint doesn't just show you numbers. It tells you exactly what to do — what to post, when, where, and how.
             </p>
           </AnimatedSection>
@@ -249,7 +249,7 @@ export function InsightsPage() {
 
       {/* ───── Engagement Heatmap — Dark Section ───── */}
       <section className="bg-[#1a171a] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px] rounded-[20px] max-w-[1440px] mx-auto">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
             <AnimatedSection className="flex-1">
               <div className="flex flex-col gap-6">
@@ -335,9 +335,9 @@ export function InsightsPage() {
 
       {/* ───── Bottom CTA ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <AnimatedSection className="w-full max-w-[1100px] mx-auto">
+        <AnimatedSection className="w-full max-w-[1240px] mx-auto">
           <div className="bg-[#231f23] rounded-[20px] p-8 sm:p-12 lg:p-16 flex flex-col items-center text-center gap-6">
-            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[480px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[600px]" style={{ fontWeight: 400 }}>
               Stop guessing. Start knowing.
             </p>
             <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>

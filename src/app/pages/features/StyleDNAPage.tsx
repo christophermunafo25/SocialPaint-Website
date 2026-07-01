@@ -120,12 +120,12 @@ export function StyleDNAPage() {
             </div>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] text-[36px] font-[Stack_Sans_Headline] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[760px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] text-[36px] font-[Stack_Sans_Headline] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[880px]" style={{ fontWeight: 400 }}>
               Your brand, decoded<br className="hidden sm:inline" /> <span className="accent-italic">down to the pixel</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[580px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[700px]" style={{ fontWeight: 300 }}>
               Socialpaint connects to your design tools and learns everything about your brand — colors, type, spacing, tone, imagery — creating a living profile that powers every piece of content.
             </p>
           </AnimatedItem>
@@ -147,14 +147,14 @@ export function StyleDNAPage() {
 
       {/* ───── What It Captures — Interactive Bento Grid ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="flex flex-col gap-6 items-start mb-12 md:mb-16">
             <div className="flex gap-2 items-center px-3 py-2 rounded-lg relative">
               <div aria-hidden="true" className="absolute border border-[rgba(35,31,35,0.08)] border-solid inset-0 pointer-events-none rounded-lg" />
               <div className="bg-[#CDBCFF] rounded-[2px] shrink-0 size-[10px]" />
               <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[12px] tracking-[0.75px] uppercase">What it captures</p>
             </div>
-            <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[560px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[680px]" style={{ fontWeight: 400 }}>
               Every detail that makes your brand yours
             </p>
           </AnimatedSection>
@@ -169,9 +169,9 @@ export function StyleDNAPage() {
 
       {/* ───── How It Learns — Dark Horizontal Timeline ───── */}
       <section className="bg-[#1a171a] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px] rounded-[20px] max-w-[1440px] mx-auto">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="mb-12 md:mb-20">
-            <p className="text-[#f7f6f5] text-[28px] sm:text-[36px] font-[Stack_Sans_Headline] lg:text-[48px] tracking-[-0.5px] leading-[1.1] text-center max-w-[600px] mx-auto" style={{ fontWeight: 400 }}>
+            <p className="text-[#f7f6f5] text-[28px] sm:text-[36px] font-[Stack_Sans_Headline] lg:text-[48px] tracking-[-0.5px] leading-[1.1] text-center max-w-[720px] mx-auto" style={{ fontWeight: 400 }}>
               From your design files to a living brand system
             </p>
           </AnimatedSection>
@@ -199,7 +199,7 @@ export function StyleDNAPage() {
 
       {/* ───── Living System Section ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
             <AnimatedSection className="flex-1">
               <div className="flex flex-col gap-6">
@@ -226,7 +226,7 @@ export function StyleDNAPage() {
               </div>
             </AnimatedSection>
 
-            <AnimatedItem delay={0.2} className="flex-1 w-full max-w-[480px]">
+            <AnimatedItem delay={0.2} className="flex-1 w-full max-w-[600px]">
               <div className="bg-[#ececec] rounded-[20px] p-6 sm:p-8">
                 <div className="flex flex-col gap-4">
                   {['Brand palette updated', 'New heading weight detected', 'Tone shift: more conversational'].map((update, i) => (
@@ -248,7 +248,7 @@ export function StyleDNAPage() {
 
       {/* ───── Integrations Strip ───── */}
       <section className="px-4 sm:px-8 pb-12">
-        <AnimatedItem className="w-full max-w-[1100px] mx-auto">
+        <AnimatedItem className="w-full max-w-[1240px] mx-auto">
           <div className="bg-[#ececec] rounded-[20px] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
             <p className="text-[rgba(35,31,35,0.48)] text-[14px]" style={{ fontWeight: 300 }}>Connects with</p>
             {INTEGRATIONS.map((tool) => {
@@ -266,9 +266,9 @@ export function StyleDNAPage() {
 
       {/* ───── Bottom CTA ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <AnimatedSection className="w-full max-w-[1100px] mx-auto">
+        <AnimatedSection className="w-full max-w-[1240px] mx-auto">
           <div className="bg-[#231f23] rounded-[20px] p-8 sm:p-12 lg:p-16 flex flex-col items-center text-center gap-6">
-            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[480px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15] max-w-[600px]" style={{ fontWeight: 400 }}>
               Ready to decode your brand?
             </p>
             <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>

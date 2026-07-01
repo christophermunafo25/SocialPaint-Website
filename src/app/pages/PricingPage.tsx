@@ -81,12 +81,12 @@ export function PricingPage() {
             </div>
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
-            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[680px]" style={{ fontWeight: 400 }}>
+            <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[800px]" style={{ fontWeight: 400 }}>
               Simple pricing, <span className="accent-italic">powerful results</span>
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
-            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[560px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[680px]" style={{ fontWeight: 300 }}>
               Start free and scale as your team grows. Every plan includes Style DNA.
             </p>
           </AnimatedItem>
@@ -114,7 +114,7 @@ export function PricingPage() {
         </AnimatedItem>
 
         {/* Plans */}
-        <div className="w-full max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+        <div className="w-full max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
           {plans.map((plan, i) => (
             <AnimatedItem key={plan.name} delay={i * 0.1}>
               <div className={`rounded-[20px] p-8 ${plan.highlighted ? 'bg-[#231f23] text-[#f7f6f5] ring-2 ring-[rgba(247,246,245,0.12)]' : 'bg-white border border-[rgba(35,31,35,0.08)]'}`}>
@@ -164,7 +164,7 @@ export function PricingPage() {
 
       {/* ───── Trust Strip ───── */}
       <section className="px-4 sm:px-8 py-8 sm:py-12">
-        <AnimatedItem className="w-full max-w-[1100px] mx-auto">
+        <AnimatedItem className="w-full max-w-[1240px] mx-auto">
           <div className="bg-[#ececec] rounded-[20px] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
             {[
               { icon: ShieldCheck, text: 'SOC 2 compliant' },
@@ -182,7 +182,7 @@ export function PricingPage() {
 
       {/* ───── Comparison Table ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="mb-10 md:mb-12">
             <p className="text-[#231f23] text-[24px] sm:text-[32px] lg:text-[36px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] text-center">
               Compare plans
@@ -224,7 +224,7 @@ export function PricingPage() {
 
       {/* ───── FAQ ───── */}
       <section className="px-4 sm:px-8 pb-16 sm:pb-20 lg:pb-[120px]">
-        <div className="max-w-[680px] mx-auto">
+        <div className="max-w-[800px] mx-auto">
           <AnimatedSection className="mb-8 md:mb-10">
             <p className="text-[#231f23] text-[24px] sm:text-[32px] tracking-[-0.5px] text-center">Frequently asked questions</p>
           </AnimatedSection>

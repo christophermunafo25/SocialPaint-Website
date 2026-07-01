@@ -290,12 +290,15 @@
   hr { border: 0; border-top: 1px solid var(--hairline); margin: var(--space-8) 0; }
 }
 
-/* Global heading line-height — the single control that keeps every heading
-   tight. Unlayered so it overrides per-component leading-[…] utilities. Covers
-   bare h1–h6 and the Stack Sans Headline display font used on heading <p>s. */
+/* Global heading treatment — the single control that keeps every heading tight
+   and balanced. Unlayered so it overrides per-component leading-[…] utilities.
+   Covers bare h1–h6 and the Stack Sans Headline display font used on heading
+   <p>s. text-wrap: balance evens the line lengths so a headline never strands
+   a single word on its own line. */
 h1, h2, h3, h4, h5, h6,
 [class~="font-[Stack_Sans_Headline]"] {
   line-height: 1.04;
+  text-wrap: balance;
 }
 
 /* Serif italic accent — Instrument Serif, for emphasized words inside a
