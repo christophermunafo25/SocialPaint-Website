@@ -22,7 +22,7 @@ export function CaseStudySection() {
               </div>
               <div className="flex flex-col gap-4 sm:gap-6 items-start w-full max-w-[564px]">
                 <p className="leading-[1.2] text-[#f7f6f5] text-[24px] sm:text-[32px] lg:text-[40px] tracking-[-0.5px]">
-                  How mercenary.ai used Socialpaint to 10x content output for their clients
+                  How mercenary.ai used SocialPaint to 10x content output for their clients
                 </p>
                 <Link to="/clients" className="bg-[#f7f6f5] flex gap-2 items-center justify-center px-5 py-3 rounded-lg cursor-pointer no-underline">
                   <p className="text-[#231f23] text-[14px] sm:text-[16px] whitespace-nowrap">Read case study</p>

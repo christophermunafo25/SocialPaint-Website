@@ -38,7 +38,7 @@ export function BlogSection() {
     {
       tagLabel: 'News',
       tagColor: '#FFED8C',
-      title: 'Socialpaint now generates platform-optimized content automatically',
+      title: 'SocialPaint now generates platform-optimized content automatically',
       date: 'March 1, 2026',
       image: imgCollaborativeDiscussion21,
     },

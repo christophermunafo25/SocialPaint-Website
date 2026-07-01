@@ -5,16 +5,16 @@ import { AnimatedSection, AnimatedItem } from './AnimatedSection';
 
 const faqs = [
   {
-    question: 'How does Socialpaint learn my brand style?',
-    answer: 'Socialpaint connects to your existing design tools — Figma, Canva, Adobe — and analyzes your brand assets including colors, typography, spacing, and layout patterns. This creates your unique Style DNA that powers all content generation.',
+    question: 'How does SocialPaint learn my brand style?',
+    answer: 'SocialPaint connects to your existing design tools — Figma, Canva, Adobe — and analyzes your brand assets including colors, typography, spacing, and layout patterns. This creates your unique Style DNA that powers all content generation.',
   },
   {
     question: 'Can anyone on my team generate content?',
     answer: 'Yes! That\'s the whole point. Once your Style DNA is set up, anyone from sales to customer success can generate on-brand content without design skills or waiting on the marketing team.',
   },
   {
-    question: 'What platforms does Socialpaint support?',
-    answer: 'Socialpaint generates content optimized for Instagram, LinkedIn, Twitter/X, Facebook, TikTok, and more. Each piece is automatically sized and formatted for the target platform.',
+    question: 'What platforms does SocialPaint support?',
+    answer: 'SocialPaint generates content optimized for Instagram, LinkedIn, Twitter/X, Facebook, TikTok, and more. Each piece is automatically sized and formatted for the target platform.',
   },
   {
     question: 'How do I ensure brand consistency across teams?',
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: 'Can I customize the AI-generated content?',
-    answer: 'Absolutely. Socialpaint generates a starting point that\'s already on-brand, then you can fine-tune text, imagery, and layout in our built-in editor before publishing.',
+    answer: 'Absolutely. SocialPaint generates a starting point that\'s already on-brand, then you can fine-tune text, imagery, and layout in our built-in editor before publishing.',
   },
   {
     question: 'What integrations are available?',

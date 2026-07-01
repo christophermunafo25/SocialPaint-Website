@@ -20,7 +20,7 @@ const logoLight = '/brand/socialpaint-light.png';
 function Logo() {
   return (
     <Link to="/" className="flex items-center shrink-0 no-underline">
-      <img src={logoDark} alt="Socialpaint" className="h-[22px] w-auto" />
+      <img src={logoDark} alt="SocialPaint" className="h-[22px] w-auto" />
     </Link>
   );
 }
@@ -48,7 +48,7 @@ function HomeDropdown({ onClose }: { onClose: () => void }) {
   const homeItems = [
     {
       label: 'Platform Overview',
-      description: 'See how Socialpaint works end-to-end',
+      description: 'See how SocialPaint works end-to-end',
       path: '/',
       iconPath: svgPathsHome.p25199c80,
       viewBox: '0 0 19.5 19.5',
@@ -63,7 +63,7 @@ function HomeDropdown({ onClose }: { onClose: () => void }) {
       bgColor: 'bg-white',
     },
     {
-      label: 'Why Socialpaint',
+      label: 'Why SocialPaint',
       description: 'What makes us different from the rest',
       path: '/',
       iconPath: svgPathsHome.p2cead8d0,
@@ -231,7 +231,7 @@ function ProductsDropdown({ onClose }: { onClose: () => void }) {
           <div className="overflow-clip rounded-[inherit] size-full relative">
             <div className="flex flex-col items-start justify-between p-6 size-full">
               <div className="flex flex-col gap-6 items-start w-full">
-                <img src={logoLight} alt="Socialpaint" className="h-[18px] w-auto" />
+                <img src={logoLight} alt="SocialPaint" className="h-[18px] w-auto" />
                 <p className="leading-[32px] text-[#f7f6f5] text-[24px]">Your brand, scaled across every channel effortlessly</p>
               </div>
               <Link to="/products/style-dna" onClick={onClose} className="bg-[#f7f6f5] flex gap-2 items-center justify-center px-5 py-3 rounded-lg cursor-pointer no-underline">
@@ -322,7 +322,7 @@ export function Navigation() {
         <div className="bg-[#A7FFAC] rounded-[20px] w-full">
           <div className="flex items-center justify-center px-4 sm:px-6 py-1">
             <div className="flex gap-2 sm:gap-3 items-center text-[#231f23] text-[11px] sm:text-[13px]">
-              <p className="text-center">Socialpaint Now in Private Beta</p>
+              <p className="text-center">SocialPaint Now in Private Beta</p>
               <p className="underline cursor-pointer shrink-0 hidden sm:block">Read more</p>
             </div>
           </div>

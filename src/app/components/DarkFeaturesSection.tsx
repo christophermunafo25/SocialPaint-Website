@@ -8,11 +8,11 @@ const CARDS = [
     number: '01',
     title: 'Give time back to marketing',
     description:
-      'Stop fulfilling one-off requests. Socialpaint handles the production so your team can focus on the work that actually shapes the brand.',
+      'Stop fulfilling one-off requests. SocialPaint handles the production so your team can focus on the work that actually shapes the brand.',
     accentColor: '#A7FFAC',
     accentGlow: 'rgba(204,253,207,0.15)',
     icon: Clock,
-    detail: 'Teams using Socialpaint redirect 60%+ of production hours back into brand strategy and creative direction.',
+    detail: 'Teams using SocialPaint redirect 60%+ of production hours back into brand strategy and creative direction.',
   },
   {
     number: '02',

@@ -43,11 +43,11 @@ export function HeroSection() {
         <div className="flex flex-col gap-6 md:gap-8 items-start md:items-center w-full">
           <div className="flex flex-col gap-4 md:gap-6 items-start md:items-center text-left md:text-center w-full">
             <AnimatedItem>
-              <p className="leading-[1.1] text-[#231f23] tracking-[-1px] font-[Stack_Sans_Headline] text-[55px]" style={{ fontWeight: 400 }}>Replicate your marketing team<br className="hidden md:inline" /> <span className="accent-italic">straight from the source.</span></p>
+              <p className="leading-[1.1] text-[#231f23] tracking-[-1px] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px]" style={{ fontWeight: 400 }}>Replicate your marketing team<br className="hidden md:inline" /> <span className="accent-italic">straight from the source.</span></p>
             </AnimatedItem>
             <AnimatedItem delay={0.1}>
               <p className="leading-[28px] sm:leading-[32px] text-[16px] sm:text-[18px] md:text-[20px] text-[rgba(35,31,35,0.64)] px-0 sm:px-[75px] py-[0px]" style={{ fontWeight: 300 }}>
-                Socialpaint is the first AI design system that learns exactly how your marketing team<br className="hidden sm:inline" /> designs and generates content for anyone in your company.
+                SocialPaint is the first AI design system that learns exactly how your marketing team<br className="hidden sm:inline" /> designs and generates content for anyone in your company.
               </p>
             </AnimatedItem>
           </div>

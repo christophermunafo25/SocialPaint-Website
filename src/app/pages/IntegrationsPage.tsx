@@ -49,7 +49,7 @@ const categories: { title: string; tag: string; tagColor: string; items: Integra
       { name: 'Buffer', icon: Clock, color: '#A7FFAC', description: 'Schedule AI-generated posts to Buffer for multi-platform publishing.' },
       { name: 'Hootsuite', icon: Radio, color: '#CDBCFF', description: 'Export content directly to Hootsuite for centralized social media management.' },
       { name: 'Notion', icon: FileText, color: '#A6CEFF', description: 'Sync content plans, brand guidelines, and generated assets to Notion.' },
-      { name: 'Zapier', icon: Zap, color: '#FFED8C', description: 'Connect Socialpaint to 5,000+ apps with custom Zapier workflows.' },
+      { name: 'Zapier', icon: Zap, color: '#FFED8C', description: 'Connect SocialPaint to 5,000+ apps with custom Zapier workflows.' },
     ],
   },
 ];
@@ -73,7 +73,7 @@ export function IntegrationsPage() {
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
             <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[680px]" style={{ fontWeight: 300 }}>
-              Socialpaint plugs into the social platforms, design tools, and marketing apps your team already uses.
+              SocialPaint plugs into the social platforms, design tools, and marketing apps your team already uses.
             </p>
           </AnimatedItem>
         </AnimatedSection>
@@ -107,7 +107,7 @@ export function IntegrationsPage() {
                 <div className="flex gap-2 items-center px-3 py-1.5 rounded-lg" style={{ backgroundColor: category.tagColor }}>
                   <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[11px] tracking-[0.75px] uppercase">{category.tag}</p>
                 </div>
-                <p className="text-[#231f23] text-[24px] sm:text-[32px] lg:text-[36px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15]">
+                <p className="text-[#231f23] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15]">
                   {category.title}
                 </p>
               </div>

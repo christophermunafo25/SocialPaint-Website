@@ -77,7 +77,7 @@ function PlatformShowcase() {
 /* ─── Scroll-driven generation flow ─── */
 const FLOW_STEPS = [
   { step: '01', title: 'Describe what you need', desc: 'Enter a brief, topic, or campaign goal. Drop in reference images or past content if you want.', icon: PenTool },
-  { step: '02', title: 'AI generates on-brand content', desc: 'Socialpaint pulls from your Style DNA to create visuals, copy, and formatting that match your brand exactly.', icon: Zap },
+  { step: '02', title: 'AI generates on-brand content', desc: 'SocialPaint pulls from your Style DNA to create visuals, copy, and formatting that match your brand exactly.', icon: Zap },
   { step: '03', title: 'Resize for every platform', desc: 'One click adapts your content to Instagram, LinkedIn, Twitter, TikTok, and more — no manual resizing.', icon: Maximize },
   { step: '04', title: 'Publish or schedule', desc: 'Export to your content calendar, push directly to platforms, or share with your team for final review.', icon: CalendarDays },
 ];
@@ -200,7 +200,7 @@ export function ContentStudioPage() {
       <section className="bg-[#1a171a] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px] rounded-[20px] max-w-[1440px] mx-auto">
         <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="mb-12 md:mb-16 text-center">
-            <p className="text-[#f7f6f5] text-[28px] sm:text-[36px] font-[Stack_Sans_Headline] lg:text-[48px] tracking-[-0.5px] leading-[1.1] max-w-[680px] mx-auto" style={{ fontWeight: 400 }}>
+            <p className="text-[#f7f6f5] text-[28px] sm:text-[40px] lg:text-[48px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.1] max-w-[680px] mx-auto" style={{ fontWeight: 400 }}>
               Every content type your team needs
             </p>
           </AnimatedSection>

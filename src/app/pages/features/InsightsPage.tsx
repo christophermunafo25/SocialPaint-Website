@@ -235,7 +235,7 @@ export function InsightsPage() {
               Actionable insights, not just dashboards
             </p>
             <p className="text-[rgba(35,31,35,0.64)] text-[15px] sm:text-[16px] leading-[26px] max-w-[640px]" style={{ fontWeight: 300 }}>
-              Socialpaint doesn't just show you numbers. It tells you exactly what to do — what to post, when, where, and how.
+              SocialPaint doesn't just show you numbers. It tells you exactly what to do — what to post, when, where, and how.
             </p>
           </AnimatedSection>
 

@@ -44,7 +44,7 @@ export function TestimonialsSection() {
   const row1: TestimonialData[] = [
     {
       company: 'Halden Miller',
-      quote: '"Socialpaint cut our content production time by more than half. Creating on-brand social posts went from hours to minutes."',
+      quote: '"SocialPaint cut our content production time by more than half. Creating on-brand social posts went from hours to minutes."',
       name: 'Jacek Rosinski',
       role: 'CTO',
       avatar: imgIconBox,
@@ -58,7 +58,7 @@ export function TestimonialsSection() {
     },
     {
       company: 'Synthesia',
-      quote: '"Our product team finally creates content without waiting on design. Socialpaint gives us brand-perfect assets anyone can generate."',
+      quote: '"Our product team finally creates content without waiting on design. SocialPaint gives us brand-perfect assets anyone can generate."',
       name: 'Daniel Romero',
       role: 'Co-Founder and CEO',
       avatar: imgIconBox2,
@@ -68,21 +68,21 @@ export function TestimonialsSection() {
   const row2: TestimonialData[] = [
     {
       company: 'Brightwave',
-      quote: '"Content bottlenecks used to kill our momentum. Now Socialpaint generates assets, checks brand compliance, and even suggests optimizations instantly."',
+      quote: '"Content bottlenecks used to kill our momentum. Now SocialPaint generates assets, checks brand compliance, and even suggests optimizations instantly."',
       name: 'Alejandro Vargas',
       role: 'Creative Director',
       avatar: imgIconBox3,
     },
     {
       company: 'Meridian Labs',
-      quote: '"Socialpaint cut our onboarding time for new marketers by more than half. Understanding our brand system went from days to minutes."',
+      quote: '"SocialPaint cut our onboarding time for new marketers by more than half. Understanding our brand system went from days to minutes."',
       name: 'Daniel Romero',
       role: 'Co-Founder and CEO',
       avatar: imgIconBox4,
     },
     {
       company: 'Brandkit',
-      quote: '"Content creation used to be the bottleneck. Now Socialpaint generates assets, checks brand fit, and suggests improvements we can publish instantly."',
+      quote: '"Content creation used to be the bottleneck. Now SocialPaint generates assets, checks brand fit, and suggests improvements we can publish instantly."',
       name: 'Jessica Mercedes',
       role: 'Head of Content',
       avatar: imgIconBox5,
@@ -110,8 +110,8 @@ export function TestimonialsSection() {
             <div className="bg-[#ed7472] rounded-[2px] shrink-0 size-[10px]" />
             <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[12px] tracking-[0.75px] uppercase">Testimonials</p>
           </div>
-          <p className="leading-[1.2] text-[#231f23] text-center tracking-[-0.5px] text-[32px] sm:text-[40px] lg:text-[48px] font-[Stack_Sans_Headline]" style={{ fontWeight: 400 }}>
-            Teams that <span className="accent-italic">ship smarter</span> choose Socialpaint
+          <p className="leading-[1.2] text-[#231f23] text-center tracking-[-0.5px] text-[28px] sm:text-[40px] lg:text-[48px] font-[Stack_Sans_Headline]" style={{ fontWeight: 400 }}>
+            Teams that <span className="accent-italic">ship smarter</span> choose SocialPaint
           </p>
         </div>
       </AnimatedSection>

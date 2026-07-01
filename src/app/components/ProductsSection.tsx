@@ -38,7 +38,7 @@ export function ProductsSection() {
             <div className="bg-[#ed7472] rounded-[2px] shrink-0 size-[10px]" />
             <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[12px] tracking-[0.75px] uppercase">Use Cases</p>
           </div>
-          <p className="leading-[1.15] text-[#231f23] text-[32px] sm:text-[40px] lg:text-[48px] text-center tracking-[-0.5px] font-[Stack_Sans_Headline]" style={{ fontWeight: 400 }}>
+          <p className="leading-[1.15] text-[#231f23] text-[28px] sm:text-[40px] lg:text-[48px] text-center tracking-[-0.5px] font-[Stack_Sans_Headline]" style={{ fontWeight: 400 }}>
             Brand knowledge into usable output <span className="accent-italic">in seconds</span>
           </p>
           <Link to="/waitlist" className="bg-[#231f23] flex gap-2 items-center justify-center px-5 py-3 rounded-lg cursor-pointer no-underline">
@@ -52,7 +52,7 @@ export function ProductsSection() {
         {[
           { tag: 'For Marketing', tagColor: '#A6CEFF', icon: BarChart3, title: 'Generate more without starting from scratch', description: 'Turn your team\'s existing creative patterns into a system that can produce new assets quickly while staying aligned with your brand.' },
           { tag: 'For the Business', tagColor: '#FFED8C', icon: Building2, title: 'Give every team access to marketing-quality assets', description: 'Sales, recruiting, partnerships, and internal teams can generate what they need without waiting on design, while still working from marketing\'s standards.' },
-          { tag: 'For Agencies', tagColor: '#A7FFAC', icon: Users, title: 'Scale client content with more consistency', description: 'Use Socialpaint to capture each client\'s brand logic and generate assets that reflect their system, making it easier to move faster across accounts.' },
+          { tag: 'For Agencies', tagColor: '#A7FFAC', icon: Users, title: 'Scale client content with more consistency', description: 'Use SocialPaint to capture each client\'s brand logic and generate assets that reflect their system, making it easier to move faster across accounts.' },
         ].map((card, i) => (
           <motion.div
             key={card.tag}

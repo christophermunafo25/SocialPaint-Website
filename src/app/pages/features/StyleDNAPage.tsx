@@ -126,7 +126,7 @@ export function StyleDNAPage() {
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
             <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[700px]" style={{ fontWeight: 300 }}>
-              Socialpaint connects to your design tools and learns everything about your brand — colors, type, spacing, tone, imagery — creating a living profile that powers every piece of content.
+              SocialPaint connects to your design tools and learns everything about your brand — colors, type, spacing, tone, imagery — creating a living profile that powers every piece of content.
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.3}>
@@ -171,7 +171,7 @@ export function StyleDNAPage() {
       <section className="bg-[#1a171a] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px] rounded-[20px] max-w-[1440px] mx-auto">
         <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="mb-12 md:mb-20">
-            <p className="text-[#f7f6f5] text-[28px] sm:text-[36px] font-[Stack_Sans_Headline] lg:text-[48px] tracking-[-0.5px] leading-[1.1] text-center max-w-[720px] mx-auto" style={{ fontWeight: 400 }}>
+            <p className="text-[#f7f6f5] text-[28px] sm:text-[40px] lg:text-[48px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.1] text-center max-w-[720px] mx-auto" style={{ fontWeight: 400 }}>
               From your design files to a living brand system
             </p>
           </AnimatedSection>

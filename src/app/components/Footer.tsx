@@ -8,7 +8,7 @@ const logoDark = '/brand/socialpaint-dark.png';
 function Logo() {
   return (
     <Link to="/" className="flex items-center shrink-0 no-underline">
-      <img src={logoDark} alt="Socialpaint" className="h-[34px] sm:h-[40px] w-auto" />
+      <img src={logoDark} alt="SocialPaint" className="h-[34px] sm:h-[40px] w-auto" />
     </Link>
   );
 }
@@ -86,7 +86,7 @@ export function Footer() {
             {/* Bottom row */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 items-start justify-between w-full">
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-start text-[13px]" style={{ fontWeight: 300 }}>
-                <p className="text-[rgba(35,31,35,0.64)]">&copy; 2026 Socialpaint Inc.</p>
+                <p className="text-[rgba(35,31,35,0.64)]">&copy; 2026 SocialPaint Inc.</p>
                 <div className="flex flex-wrap gap-4 h-full items-start text-[#231f23]">
                   <a href="#" className="hover:opacity-70 transition-opacity">Changelog</a>
                   <a href="#" className="hover:opacity-70 transition-opacity">Style Guide</a>

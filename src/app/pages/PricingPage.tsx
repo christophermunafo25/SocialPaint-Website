@@ -184,7 +184,7 @@ export function PricingPage() {
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
         <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="mb-10 md:mb-12">
-            <p className="text-[#231f23] text-[24px] sm:text-[32px] lg:text-[36px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] text-center">
+            <p className="text-[#231f23] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] text-center">
               Compare plans
             </p>
           </AnimatedSection>

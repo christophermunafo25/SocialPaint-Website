@@ -257,7 +257,7 @@ export function SmartTemplatesPage() {
       <section className="bg-[#1a171a] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px] rounded-[20px] max-w-[1440px] mx-auto">
         <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="mb-12 md:mb-16 text-center">
-            <p className="text-[#f7f6f5] text-[28px] sm:text-[36px] font-[Stack_Sans_Headline] lg:text-[48px] tracking-[-0.5px] leading-[1.1] max-w-[720px] mx-auto mb-4" style={{ fontWeight: 400 }}>
+            <p className="text-[#f7f6f5] text-[28px] sm:text-[40px] lg:text-[48px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.1] max-w-[720px] mx-auto mb-4" style={{ fontWeight: 400 }}>
               One template, infinite brands
             </p>
             <p className="text-[rgba(247,246,245,0.5)] text-[15px] sm:text-[16px] leading-[26px] max-w-[600px] mx-auto" style={{ fontWeight: 300 }}>

@@ -55,7 +55,7 @@ function FeaturePanel({ tag, tagColor, iconPath, icon, title, description, butto
         </div>
         {/* Text */}
         <div className="flex flex-col gap-4 lg:gap-5 items-start w-full">
-          <p className="leading-[1.2] text-[#231f23] text-[28px] sm:text-[32px] lg:text-[40px] tracking-[-0.5px] w-full font-[Stack_Sans_Headline]" style={{ fontWeight: 400 }}>{title}</p>
+          <p className="leading-[1.2] text-[#231f23] text-[28px] sm:text-[36px] lg:text-[40px] tracking-[-0.5px] w-full font-[Stack_Sans_Headline]" style={{ fontWeight: 400 }}>{title}</p>
           <p className="leading-[24px] text-[14px] sm:text-[16px] text-[rgba(35,31,35,0.64)] w-full" style={{ fontWeight: 300 }}>{description}</p>
         </div>
         {/* Button */}
@@ -234,7 +234,7 @@ export function StickyScrollSection() {
       iconPath: svgPaths.p7050450,
       icon: <ScanSearch size={16} strokeWidth={1.5} color="#231F23" />,
       title: <>Your brand, <span className="accent-italic">down to the pixel</span></>,
-      description: 'Socialpaint connects to your marketing team\'s favorite design systems and learns your brand from the source. Spacing, colors, typography and more!',
+      description: 'SocialPaint connects to your marketing team\'s favorite design systems and learns your brand from the source. Spacing, colors, typography and more!',
       buttonLabel: 'Explore How',
       buttonPath: '/products/style-dna',
     },
@@ -243,7 +243,7 @@ export function StickyScrollSection() {
       tagColor: '#A7FFAC',
       iconPath: svgPaths.p2d65aec0,
       title: <>Turn creative decisions into <span className="accent-italic">brand intelligence</span></>,
-      description: 'Socialpaint stores the patterns behind your team\'s work, from layout and spacing to messaging and visual style, so the brand knowledge your designers use every day becomes structured data anyone in the company can build from.',
+      description: 'SocialPaint stores the patterns behind your team\'s work, from layout and spacing to messaging and visual style, so the brand knowledge your designers use every day becomes structured data anyone in the company can build from.',
       buttonLabel: 'See Generation',
       buttonPath: '/products/content-studio',
     },
@@ -252,7 +252,7 @@ export function StickyScrollSection() {
       tagColor: '#FFC5B0',
       iconPath: svgPaths.p27db1580,
       title: <>Give every team the power to <span className="accent-italic">create on-brand</span></>,
-      description: 'Instead of waiting in line for new assets, teams can generate what they need on demand with Socialpaint, using the brand logic and creative decisions your marketing team has already put in place.',
+      description: 'Instead of waiting in line for new assets, teams can generate what they need on demand with SocialPaint, using the brand logic and creative decisions your marketing team has already put in place.',
       buttonLabel: 'Start Creating',
       buttonPath: '/products/content-studio',
     },

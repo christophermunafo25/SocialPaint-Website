@@ -4,7 +4,7 @@ import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { ArrowRight, TrendingUp, Clock, Users, Sparkles, Quote } from 'lucide-react';
 
 const heroStats = [
-  { value: '500+', label: 'Teams using Socialpaint', icon: Users },
+  { value: '500+', label: 'Teams using SocialPaint', icon: Users },
   { value: '10x', label: 'Average output increase', icon: TrendingUp },
   { value: '98%', label: 'Brand consistency score', icon: Sparkles },
   { value: '< 10min', label: 'To first content piece', icon: Clock },
@@ -15,7 +15,7 @@ const featured = {
   industry: 'AI Agency',
   stat: '10x content output',
   image: 'https://images.unsplash.com/photo-1758873268877-3cd8ed329ed8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXJrZXRpbmclMjB0ZWFtJTIwY3JlYXRpdmUlMjBhZ2VuY3klMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzczNDM5Mzk0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-  quote: 'Socialpaint let us scale content production for 12 clients simultaneously without adding headcount. The AI learns each client\'s brand independently and generates content that\'s indistinguishable from what their in-house team would create.',
+  quote: 'SocialPaint let us scale content production for 12 clients simultaneously without adding headcount. The AI learns each client\'s brand independently and generates content that\'s indistinguishable from what their in-house team would create.',
   person: 'Alex Chen',
   role: 'CEO, mercenary.ai',
 };
@@ -27,7 +27,7 @@ const testimonials = [
   { name: 'Daniel Romero', role: 'Co-Founder & CEO', company: 'Synthesia', industry: 'AI Video Platform', stat: '300+ assets/month', quote: 'Our product team finally creates content without waiting on design. Brand-perfect assets anyone can generate.', color: '#A7FFAC' },
   { name: 'Jacek Rosinski', role: 'CTO', company: 'Halden Miller', industry: 'Fintech', stat: '98% brand consistency', quote: 'Content production time went from hours to minutes. Every piece is on-brand, every time.', color: '#A6CEFF' },
   { name: 'Jessica Mercedes', role: 'Head of Content', company: 'Brandkit', industry: 'Brand Management', stat: '4x social engagement', quote: 'Content creation used to be the bottleneck. Now we generate, check brand fit, and publish instantly.', color: '#FFED8C' },
-  { name: 'Alejandro Vargas', role: 'Creative Director', company: 'Brightwave', industry: 'Marketing Tech', stat: '50% lower costs', quote: 'Content bottlenecks used to kill our momentum. Socialpaint generates assets and checks compliance instantly.', color: '#FFC5B0' },
+  { name: 'Alejandro Vargas', role: 'Creative Director', company: 'Brightwave', industry: 'Marketing Tech', stat: '50% lower costs', quote: 'Content bottlenecks used to kill our momentum. SocialPaint generates assets and checks compliance instantly.', color: '#FFC5B0' },
   { name: 'Sam Okafor', role: 'VP Marketing', company: 'Meridian Labs', industry: 'SaaS', stat: '2-day → 10-min onboarding', quote: 'New marketers understand our brand system in minutes instead of days. The learning curve basically vanished.', color: '#CDBCFF' },
 ];
 
@@ -45,12 +45,12 @@ export function ClientsPage() {
           </AnimatedItem>
           <AnimatedItem delay={0.1}>
             <p className="text-[#231f23] font-[Stack_Sans_Headline] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-[-1px] leading-[1.1] max-w-[800px]" style={{ fontWeight: 400 }}>
-              Teams that <span className="accent-italic">ship smarter</span> choose Socialpaint
+              Teams that <span className="accent-italic">ship smarter</span> choose SocialPaint
             </p>
           </AnimatedItem>
           <AnimatedItem delay={0.2}>
             <p className="text-[rgba(35,31,35,0.64)] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] sm:leading-[32px] max-w-[680px]" style={{ fontWeight: 300 }}>
-              From startups to agencies, marketing teams use Socialpaint to create on-brand content at scale.
+              From startups to agencies, marketing teams use SocialPaint to create on-brand content at scale.
             </p>
           </AnimatedItem>
         </AnimatedSection>
