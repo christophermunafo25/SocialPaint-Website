@@ -1,0 +1,431 @@
+/* ==========================================================================
+   SocialPaint — Colors & Type
+   The single source of truth for color tokens, typography tokens, and
+   the semantic element styles used across the brand.
+
+   Usage:  <link rel="stylesheet" href="/colors_and_type.css">
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------- */
+/*  FONTS — Stack Sans (Pangram Pangram) + Fragment Mono (Google)             */
+/* -------------------------------------------------------------------------- */
+
+/* Fragment Mono is imported once from fonts.css (kept first in the bundle so
+   the remote @import precedes all other statements). Stack Sans + Instrument
+   Serif are self-hosted below. */
+
+@font-face {
+  font-family: "Stack Sans Headline";
+  src: url("/fonts/StackSansHeadline-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stack Sans";
+  src: url("/fonts/StackSansText-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Static fallbacks (in case variable axes are unsupported) */
+@font-face { font-family: "Stack Sans"; src: url("/fonts/StackSansText-Light.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Stack Sans"; src: url("/fonts/StackSansText-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Stack Sans"; src: url("/fonts/StackSansText-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Stack Sans Headline"; src: url("/fonts/StackSansHeadline-Light.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Stack Sans Headline"; src: url("/fonts/StackSansHeadline-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+
+/* Instrument Serif (self-hosted) — italic is the brand's headline accent. */
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("/fonts/InstrumentSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("/fonts/InstrumentSerif-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*  TOKENS                                                                    */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  /* ── Surfaces ─────────────────────────────────────────────────────────── */
+  --linen:           #faf8f5;   /* Linen Base — outermost page wash */
+  --paper:           #f7f6f5;   /* Paper Cream — primary canvas */
+  --paper-warm:      #ececec;   /* Light gray — secondary surfaces, dividers */
+  --lift:            #ffffff;   /* Lift White — elevated cards, inputs */
+  --ink:             #231f23;   /* Midnight Ink — primary text, dark CTAs */
+  --obsidian:        #1a171a;   /* Obsidian Depth — full dark sections */
+
+  /* ── Pastel accents (each feature owns one) ───────────────────────────── */
+  /* Vivid-pastel set — slightly more saturated than the originals so they
+     hold up against the warm brand spectrum. No coral pastel; reach for
+     --solar / --blush from the warm spectrum when you need warm emphasis. */
+  --orchid:          #CDBCFF;   /* StyleDNA */
+  --mint:            #A7FFAC;   /* Generate Designs */
+  --sky:             #A6CEFF;   /* Connectors */
+  --sand:            #FFED8C;   /* Insights & Analytics */
+  --peach:           #FFC5B0;   /* Brand Templates */
+
+  /* ── Warm Spectrum · PRIMARY BRAND ────────────────────────────────────── */
+  /* The brand's three primary expressive colors. Used in mesh backgrounds,
+     hero washes, focus states, and anywhere the brand needs to actually feel
+     warm. Stack vertically: amber (top) → solar (middle) → blush (bottom).
+     Pastels (above) remain the feature/category palette for product surfaces. */
+  --amber:           #FF8300;   /* warm yellow — top of the mesh */
+  --solar:           #FF3F00;   /* warm orange — middle of the mesh, dominant CTA */
+  --blush:           #FF5A72;   /* warm pink   — bottom of the mesh */
+
+  /* Legacy aliases — kept so existing references keep working.
+     Do not introduce new uses; reach for amber / solar / blush directly. */
+  --sunset:          var(--solar);
+  --apricot:         var(--amber);
+  --coral-warm:      var(--blush);
+  --magenta:         var(--blush);
+
+  /* ── Semantic state ───────────────────────────────────────────────────── */
+  --success:         #4a7c59;
+  --danger:          #e94560;
+
+  /* ── Foreground opacities on light ─────────────────────────────────────── */
+  --fg-1:            #231f23;                    /* primary */
+  --fg-2:            rgba(35,31,35,0.64);        /* secondary */
+  --fg-3:            rgba(35,31,35,0.48);        /* tertiary / labels */
+  --fg-4:            rgba(35,31,35,0.32);        /* placeholder */
+  --fg-5:            rgba(35,31,35,0.08);        /* disabled / borders */
+  --hairline:        rgba(35,31,35,0.08);        /* borders, dividers */
+  --hairline-strong: rgba(35,31,35,0.24);        /* focus borders */
+
+  /* ── Foreground opacities on dark ──────────────────────────────────────── */
+  --fg-on-dark-1:    #f7f6f5;
+  --fg-on-dark-2:    rgba(247,246,245,0.64);
+  --fg-on-dark-3:    rgba(247,246,245,0.48);
+  --fg-on-dark-4:    rgba(247,246,245,0.32);
+  --fg-on-dark-5:    rgba(247,246,245,0.08);
+  --hairline-dark:   rgba(247,246,245,0.08);
+
+  /* ── Typography families ──────────────────────────────────────────────── */
+  --font-display:    "Stack Sans Headline", "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body:       "Stack Sans", "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:       "Fragment Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-accent:     "Instrument Serif", Georgia, "Times New Roman", serif;  /* italic serif accent for headline emphasis */
+
+  /* Accent scale — Instrument Serif has a smaller x-height than Stack Sans
+     Headline, so accent words are set ~1.15× the sans to optically match
+     (e.g. Stack Sans Headline 100px → Instrument Serif italic 115px). */
+  --accent-scale:    1.15;   /* @kind other */
+
+  /* ── Type roles (values, not selectors — for one-off use) ─────────────── */
+  --display-1-size:    clamp(40px, 6vw, 96px);
+  --display-1-tracking:-2px;
+  --display-1-leading: 1.02;
+
+  --h1-size:           clamp(36px, 4.6vw, 64px);
+  --h1-tracking:       -1px;
+  --h1-leading:        1.1;
+
+  --h2-size:           clamp(28px, 3vw, 48px);
+  --h2-tracking:       -0.5px;
+  --h2-leading:        1.15;
+
+  --h3-size:           clamp(22px, 1.8vw, 32px);
+  --h3-tracking:       -0.4px;
+  --h3-leading:        1.2;
+
+  --h4-size:           20px;
+  --h4-tracking:       -0.2px;
+  --h4-leading:        1.3;
+
+  --body-lg-size:      18px;
+  --body-size:         16px;
+  --body-sm-size:      14px;
+  --body-leading:      1.5;
+
+  --label-size:        12px;
+  --label-size-sm:     11px;
+  --label-tracking:    0.75px;
+
+  /* ── Radii ────────────────────────────────────────────────────────────── */
+  --radius-card:       20px;
+  --radius-card-sm:    16px;
+  --radius-icon:       12px;
+  --radius-input:      10px;
+  --radius-button:     8px;
+  --radius-pill:       999px;
+  --radius-dot:        2px;
+
+  /* ── Shadows ──────────────────────────────────────────────────────────── */
+  --shadow-card:       0 4px 80px rgba(35,31,35,0.08);
+  --shadow-dropdown:   0 4px 40px rgba(35,31,35,0.08);
+  --shadow-hover:      0 8px 40px rgba(35,31,35,0.06);
+  --shadow-none:       0 0 0 transparent;
+
+  /* ── Spacing ──────────────────────────────────────────────────────────── */
+  --space-1:           4px;
+  --space-2:           8px;
+  --space-3:           12px;
+  --space-4:           16px;
+  --space-5:           20px;
+  --space-6:           24px;
+  --space-8:           32px;
+  --space-10:          40px;
+  --space-12:          48px;
+  --space-16:          64px;
+  --space-20:          80px;
+  --space-24:          96px;
+  --space-30:          120px;
+  --space-40:          160px;
+  --space-50:          200px;
+
+  /* ── Easing / motion ──────────────────────────────────────────────────── */
+  --ease-brand:        cubic-bezier(.25,.1,.25,1);    /* @kind other */
+  --ease-entrance:     cubic-bezier(.16,1,.3,1);      /* @kind other */
+  --ease-exit:         cubic-bezier(.4,0,1,1);        /* @kind other */
+  --ease-emphasized:   cubic-bezier(.2,0,0,1);        /* @kind other */
+  --ease-spring:       cubic-bezier(.34,1.56,.64,1);  /* @kind other */
+  --dur-instant:       0.08s;   /* @kind other */
+  --dur-fast:          0.2s;    /* @kind other */
+  --dur-base:          0.3s;    /* @kind other */
+  --dur-slow:          0.6s;    /* @kind other */
+  --dur-deliberate:    1.2s;    /* @kind other */
+
+  /* ── Elevation / z-index scale ────────────────────────────────────────── */
+  --z-base:            0;       /* @kind other */
+  --z-raised:          10;      /* @kind other */
+  --z-sticky:          100;     /* @kind other */
+  --z-dropdown:        200;     /* @kind other */
+  --z-overlay:         300;     /* @kind other */
+  --z-modal:           400;     /* @kind other */
+  --z-toast:           500;     /* @kind other */
+  --z-tooltip:         600;     /* @kind other */
+
+  /* Shadow tied to elevation level (use these when in doubt). */
+  --shadow-e0:         none;
+  --shadow-e1:         0 1px 2px rgba(35,31,35,0.04), 0 1px 1px rgba(35,31,35,0.03);     /* inputs at rest */
+  --shadow-e2:         0 4px 16px rgba(35,31,35,0.06);                                    /* cards */
+  --shadow-e3:         0 8px 32px rgba(35,31,35,0.08);                                    /* hovered cards, popovers */
+  --shadow-e4:         0 16px 48px rgba(35,31,35,0.12);                                   /* modals */
+  --shadow-e5:         0 24px 64px rgba(35,31,35,0.18);                                   /* command palette */
+
+  /* ── Focus ring ───────────────────────────────────────────────────────── */
+  --focus-ring:        0 0 0 3px rgba(255,63,0,0.32);  /* solar @ 32% */
+  --focus-ring-tight:  0 0 0 2px rgba(255,63,0,0.40);
+  --focus-ring-dark:   0 0 0 3px rgba(255,131,0,0.45); /* amber on dark surfaces */
+  --focus-outline-offset: 2px; /* @kind spacing */
+
+  /* ── Density ──────────────────────────────────────────────────────────── */
+  /* Use these so tables/lists can swap density without touching markup. */
+  --row-h-compact:     32px;
+  --row-h-cozy:        40px;    /* default */
+  --row-h-comfy:       52px;
+  --row-px-compact:    10px;
+  --row-px-cozy:       14px;
+  --row-px-comfy:      18px;
+
+  /* ── Signature halo (warm bloom — amber core → solar → blush) ────── */
+  --halo:
+    radial-gradient(55% 50% at 50% 45%,
+      rgba(255,131,  0, 0.62)  0%,
+      rgba(255,131,  0, 0.45) 22%,
+      rgba(255, 63,  0, 0.42) 42%,
+      rgba(255, 63,  0, 0.28) 62%,
+      rgba(255, 90,114, 0.14) 80%,
+      transparent             100%); /* @kind color */
+}
+
+/* -------------------------------------------------------------------------- */
+/*  SEMANTIC ELEMENT DEFAULTS                                                 */
+/*  Use bare <h1>, <p>, etc. and they look correct without classes.           */
+/* -------------------------------------------------------------------------- */
+
+/* Bare-element resets live in @layer base so component Tailwind utilities
+   (leading-[…], text-[…], hover:opacity-*) reliably override them. Keeping
+   them unlayered was clobbering the site's intended heading line-heights. */
+@layer base {
+  html {
+    font-family: var(--font-body);
+    color: var(--fg-1);
+    background: var(--paper);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: var(--body-leading);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body { background: var(--linen); }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--fg-1);
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  h1 { font-size: var(--h1-size); letter-spacing: var(--h1-tracking); line-height: var(--h1-leading); }
+  h2 { font-size: var(--h2-size); letter-spacing: var(--h2-tracking); line-height: var(--h2-leading); }
+  h3 { font-size: var(--h3-size); letter-spacing: var(--h3-tracking); line-height: var(--h3-leading); }
+  h4 { font-size: var(--h4-size); letter-spacing: var(--h4-tracking); line-height: var(--h4-leading); }
+
+  p { margin: 0; font-weight: 300; line-height: var(--body-leading); }
+  p.lead { font-size: var(--body-lg-size); color: var(--fg-2); }
+  p.body { font-size: var(--body-size); color: var(--fg-2); }
+  p.small { font-size: var(--body-sm-size); color: var(--fg-2); }
+
+  a { color: inherit; text-decoration: none; transition: opacity var(--dur-fast) var(--ease-brand); }
+  a:hover { opacity: 0.7; }
+
+  hr { border: 0; border-top: 1px solid var(--hairline); margin: var(--space-8) 0; }
+}
+
+/* Global heading line-height — the single control that keeps every heading
+   tight. Unlayered so it overrides per-component leading-[…] utilities. Covers
+   bare h1–h6 and the Stack Sans Headline display font used on heading <p>s. */
+h1, h2, h3, h4, h5, h6,
+[class~="font-[Stack_Sans_Headline]"] {
+  line-height: 1.04;
+}
+
+/* Serif italic accent — Instrument Serif, for emphasized words inside a
+   Stack Sans Headline. MARKETING SURFACES ONLY — do not use in product /
+   platform UI. The brand pairs the upright sans headline with a few accent
+   words in italic serif (“Replicate your team <em>straight from the
+   source.</em>”).
+     • <em>             — inline emphasis, serif italic at the surrounding size.
+     • .accent-italic    — headline accent, serif italic bumped to --accent-scale
+                           (~1.15×) so the smaller x-height optically matches. */
+em {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.accent-italic {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 400;
+  font-size: calc(1em * var(--accent-scale));
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* Monospace label — uppercase, tracked. Used for taxonomy & metadata only. */
+.label,
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--label-size);
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  color: var(--fg-3);
+  font-weight: 400;
+}
+
+code, kbd, samp, pre {
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+::selection { background: var(--orchid); color: var(--ink); }
+
+/* -------------------------------------------------------------------------- */
+/*  MESH GRADIENT — the signature warm grainy mesh                            */
+/*                                                                            */
+/*  The brand's primary expressive background. Sampled directly from the      */
+/*  reference mesh: solar orange (top) → apricot (top-right) → coral (mid)    */
+/*  → blush (bottom-left) → magenta (deep bottom-left).                       */
+/*                                                                            */
+/*  Usage:                                                                    */
+/*    <div class="mesh-warm">…</div>                                          */
+/*    or compose: background: var(--mesh-warm); + .grain ::after for noise    */
+/*                                                                            */
+/*  The .grain modifier adds the SVG turbulence overlay that gives the mesh   */
+/*  its tactile film-grain feel. Always pair the two for the signature look.  */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  /* The mesh as a reusable background-image value, in case you need to layer
+     it under custom content rather than using the .mesh-warm class.
+     Three colors only — amber (top) → solar (middle) → blush (bottom). */
+  --mesh-warm:
+    /* Top band · amber */
+    radial-gradient(90% 75% at 82%  6%,  rgba(255,131,  0, 1) 0%, rgba(255,131,  0, 0.55) 40%, rgba(255,131,  0, 0) 100%),
+    radial-gradient(85% 70% at 22% 14%,  rgba(255,131,  0, 1) 0%, rgba(255,131,  0, 0.55) 45%, rgba(255,131,  0, 0) 100%),
+    /* Middle band · solar */
+    radial-gradient(90% 75% at 58% 42%,  rgba(255, 63,  0, 1) 0%, rgba(255, 63,  0, 0.55) 45%, rgba(255, 63,  0, 0) 100%),
+    radial-gradient(80% 65% at  8% 52%,  rgba(255, 63,  0, 1) 0%, rgba(255, 63,  0, 0.55) 45%, rgba(255, 63,  0, 0) 100%),
+    radial-gradient(75% 65% at 92% 60%,  rgba(255, 63,  0, 1) 0%, rgba(255, 63,  0, 0.55) 45%, rgba(255, 63,  0, 0) 100%),
+    /* Bottom band · blush */
+    radial-gradient(80% 65% at 28% 86%,  rgba(255, 90,114, 1) 0%, rgba(255, 90,114, 0.55) 45%, rgba(255, 90,114, 0) 100%),
+    radial-gradient(70% 60% at 82% 96%,  rgba(255, 90,114, 1) 0%, rgba(255, 90,114, 0.55) 45%, rgba(255, 90,114, 0) 100%),
+    linear-gradient(180deg, #FF8300 0%, #FF3F00 50%, #FF5A72 100%); /* @kind color */
+
+  /* A subtler variant for secondary uses — same 3 colors, lower intensity. */
+  --mesh-soft:
+    radial-gradient(70% 60% at 80% 10%, rgba(255,131,  0, 0.85) 0%, transparent 60%),
+    radial-gradient(60% 55% at 18% 35%, rgba(255, 63,  0, 0.80) 0%, transparent 65%),
+    radial-gradient(60% 55% at 78% 75%, rgba(255, 90,114, 0.85) 0%, transparent 65%),
+    linear-gradient(170deg, #FF8300 0%, #FF3F00 55%, #FF5A72 100%); /* @kind color */
+}
+
+.mesh-warm {
+  background: var(--mesh-warm);
+  background-color: var(--solar); /* fallback */
+  background-blend-mode: normal;
+  position: relative;
+  isolation: isolate;
+  color: var(--fg-on-dark-1); /* mesh is dark enough on average to read white */
+}
+
+.mesh-soft {
+  background: var(--mesh-soft);
+  background-color: var(--solar);
+  position: relative;
+  isolation: isolate;
+}
+
+/* Grain overlay — pair with any .mesh-* surface (or apply standalone over an
+   image). Uses SVG fractal noise; very low opacity so the texture feels like
+   film rather than static. Sized to tile naturally on any container. */
+.grain::after,
+.mesh-warm::after,
+.mesh-soft::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 240px 240px;
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* The mesh's own children should sit above the grain. */
+.mesh-warm > *,
+.mesh-soft > *,
+.grain > * { position: relative; z-index: 2; }
+
+/* A small swatch chip showing the mesh — useful for inline references. */
+.mesh-chip {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--mesh-warm);
+  border: 1px solid var(--hairline);
+  vertical-align: middle;
+}

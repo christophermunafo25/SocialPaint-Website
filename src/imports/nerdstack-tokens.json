@@ -1,0 +1,448 @@
+{
+  "color": {
+    "ash-depth": {
+      "$value": "#ececec",
+      "$type": "color",
+      "$description": "Ash Depth — Recessed depth surface. Input fields, subtle chip wells, and inset zones beneath the canvas."
+    },
+    "cache-sand": {
+      "$value": "#f4e7c7",
+      "$type": "color",
+      "$description": "Cache Sand — Warm tag accent. Footer pills, blog category chips, and warm gradient endpoints."
+    },
+    "core-coral": {
+      "$value": "#ed7472",
+      "$type": "color",
+      "$description": "Core Coral — Critical accent & error tone. Marks debug critical states, error chips, and warm gradient stops."
+    },
+    "lift-white": {
+      "$value": "#ffffff",
+      "$type": "color",
+      "$description": "Lift White — Lifted card surface. Pure white used for elevated cards, dropdowns, and floating tiles above the cream."
+    },
+    "linen-base": {
+      "$value": "#f6f3f0",
+      "$type": "color",
+      "$description": "Linen Base — Alternate page canvas. Slightly warmer cream used for full-bleed background washes and hero stages."
+    },
+    "packet-sky": {
+      "$value": "#d7e9ff",
+      "$type": "color",
+      "$description": "Packet Sky — Cleanup & info accent. Cool pastel for review tags, debug icon backdrops, and informational chips."
+    },
+    "paper-cream": {
+      "$value": "#f7f6f5",
+      "$type": "color",
+      "$description": "Paper Cream — Primary canvas. Warm off-white background that anchors every page surface and section."
+    },
+    "syntax-mint": {
+      "$value": "#ccfdcf",
+      "$type": "color",
+      "$description": "Syntax Mint — Success & banner accent. Pass states, announcement banners, and docs category tags."
+    },
+    "midnight-ink": {
+      "$value": "#231f23",
+      "$type": "color",
+      "$description": "Midnight Ink — Primary text & ink. Headlines, body copy, primary button fills, and dark surfaces."
+    },
+    "qubit-orchid": {
+      "$value": "#cebffa",
+      "$type": "color",
+      "$description": "Qubit Orchid — Issue category accent. Soft lavender tile backgrounds for issue-found tags and product icons."
+    },
+    "signal-amber": {
+      "$value": "#d5ad4b",
+      "$type": "color",
+      "$description": "Signal Amber — Warning state. Reserved for caution indicators and validation feedback only."
+    },
+    "verdant-pass": {
+      "$value": "#5cce63",
+      "$type": "color",
+      "$description": "Verdant Pass — Success state. Reserved for confirmed-pass indicators and form success feedback."
+    },
+    "violet-quill": {
+      "$value": "#4c3e5e",
+      "$type": "color",
+      "$description": "Violet Quill — Brand accent. Reserved for occasional emphasis, brand marks, and subdued highlights."
+    },
+    "graphite-lift": {
+      "$value": "#322d32",
+      "$type": "color",
+      "$description": "Graphite Lift — Dark-mode lifted surface. Cards and form blocks elevated against obsidian backgrounds."
+    },
+    "latency-peach": {
+      "$value": "#ffe1d6",
+      "$type": "color",
+      "$description": "Latency Peach — Warning accent & gradient halo. Warning markers, peach text accents, and the signature CTA gradient bloom."
+    },
+    "obsidian-depth": {
+      "$value": "#1a171a",
+      "$type": "color",
+      "$description": "Obsidian Depth — Deepest dark surface. Dark-mode hero backgrounds and inverted code panels."
+    }
+  },
+  "font": {
+    "fragment-mono": {
+      "$value": "\"Fragment Mono\", Arial, sans-serif",
+      "$type": "fontFamily",
+      "$description": "Labels & taxonomy. Uppercased monospace voice for category tags, table headers, and small metadata."
+    },
+    "stacksans-text": {
+      "$value": "\"StackSans text Variable\", Arial, sans-serif",
+      "$type": "fontFamily",
+      "$description": "Body & UI. Light-weight default for paragraphs, buttons, navigation, and form fields."
+    },
+    "stacksans-headline": {
+      "$value": "\"StackSans headline Variable\", Arial, sans-serif",
+      "$type": "fontFamily",
+      "$description": "Display & headings. A low-contrast geometric sans that carries every H0–H6 with confident, slightly compressed letterforms."
+    }
+  },
+  "typography": {
+    "caption": {
+      "$value": {
+        "fontFamily": "\"Fragment Mono\", Arial, sans-serif",
+        "fontSize": "10px",
+        "fontWeight": 400,
+        "lineHeight": 1.2,
+        "letterSpacing": "0.75px"
+      },
+      "$type": "typography",
+      "$description": "Type step caption at 10px"
+    },
+    "body-sm": {
+      "$value": {
+        "fontFamily": "\"StackSans text Variable\", Arial, sans-serif",
+        "fontSize": "13px",
+        "fontWeight": 300,
+        "lineHeight": 1.54,
+        "letterSpacing": "0px"
+      },
+      "$type": "typography",
+      "$description": "Type step body-sm at 13px"
+    },
+    "body": {
+      "$value": {
+        "fontFamily": "\"StackSans text Variable\", Arial, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": 300,
+        "lineHeight": 1.5,
+        "letterSpacing": "0px"
+      },
+      "$type": "typography",
+      "$description": "Type step body at 16px"
+    },
+    "body-lg": {
+      "$value": {
+        "fontFamily": "\"StackSans text Variable\", Arial, sans-serif",
+        "fontSize": "20px",
+        "fontWeight": 300,
+        "lineHeight": 1.6,
+        "letterSpacing": "0px"
+      },
+      "$type": "typography",
+      "$description": "Type step body-lg at 20px"
+    },
+    "heading-sm": {
+      "$value": {
+        "fontFamily": "\"StackSans headline Variable\", Arial, sans-serif",
+        "fontSize": "20px",
+        "fontWeight": 400,
+        "lineHeight": 1.2,
+        "letterSpacing": "0px"
+      },
+      "$type": "typography",
+      "$description": "Type step heading-sm at 20px"
+    },
+    "heading": {
+      "$value": {
+        "fontFamily": "\"StackSans headline Variable\", Arial, sans-serif",
+        "fontSize": "32px",
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": "0px"
+      },
+      "$type": "typography",
+      "$description": "Type step heading at 32px"
+    },
+    "heading-lg": {
+      "$value": {
+        "fontFamily": "\"StackSans headline Variable\", Arial, sans-serif",
+        "fontSize": "40px",
+        "fontWeight": 400,
+        "lineHeight": 1.2,
+        "letterSpacing": "-0.5px"
+      },
+      "$type": "typography",
+      "$description": "Type step heading-lg at 40px"
+    },
+    "display-sm": {
+      "$value": {
+        "fontFamily": "\"StackSans headline Variable\", Arial, sans-serif",
+        "fontSize": "48px",
+        "fontWeight": 400,
+        "lineHeight": 1.17,
+        "letterSpacing": "-0.5px"
+      },
+      "$type": "typography",
+      "$description": "Type step display-sm at 48px"
+    },
+    "display": {
+      "$value": {
+        "fontFamily": "\"StackSans headline Variable\", Arial, sans-serif",
+        "fontSize": "64px",
+        "fontWeight": 400,
+        "lineHeight": 1.06,
+        "letterSpacing": "-1px"
+      },
+      "$type": "typography",
+      "$description": "Type step display at 64px"
+    },
+    "display-xl": {
+      "$value": {
+        "fontFamily": "\"StackSans headline Variable\", Arial, sans-serif",
+        "fontSize": "88px",
+        "fontWeight": 400,
+        "lineHeight": 1,
+        "letterSpacing": "-2px"
+      },
+      "$type": "typography",
+      "$description": "Type step display-xl at 88px"
+    }
+  },
+  "spacing": {
+    "4": {
+      "$value": "4px",
+      "$type": "dimension",
+      "$description": "Spacing 4px"
+    },
+    "8": {
+      "$value": "8px",
+      "$type": "dimension",
+      "$description": "Spacing 8px"
+    },
+    "12": {
+      "$value": "12px",
+      "$type": "dimension",
+      "$description": "Spacing 12px"
+    },
+    "16": {
+      "$value": "16px",
+      "$type": "dimension",
+      "$description": "Spacing 16px"
+    },
+    "20": {
+      "$value": "20px",
+      "$type": "dimension",
+      "$description": "Spacing 20px"
+    },
+    "24": {
+      "$value": "24px",
+      "$type": "dimension",
+      "$description": "Spacing 24px"
+    },
+    "32": {
+      "$value": "32px",
+      "$type": "dimension",
+      "$description": "Spacing 32px"
+    },
+    "48": {
+      "$value": "48px",
+      "$type": "dimension",
+      "$description": "Spacing 48px"
+    },
+    "64": {
+      "$value": "64px",
+      "$type": "dimension",
+      "$description": "Spacing 64px"
+    },
+    "80": {
+      "$value": "80px",
+      "$type": "dimension",
+      "$description": "Spacing 80px"
+    },
+    "120": {
+      "$value": "120px",
+      "$type": "dimension",
+      "$description": "Spacing 120px"
+    },
+    "160": {
+      "$value": "160px",
+      "$type": "dimension",
+      "$description": "Spacing 160px"
+    },
+    "200": {
+      "$value": "200px",
+      "$type": "dimension",
+      "$description": "Spacing 200px"
+    },
+    "unit": {
+      "$value": "4px",
+      "$type": "dimension",
+      "$description": "Base spacing unit"
+    }
+  },
+  "radius": {
+    "pill": {
+      "$value": "999px",
+      "$type": "dimension",
+      "$description": "Border radius pill"
+    },
+    "tags": {
+      "$value": "8px",
+      "$type": "dimension",
+      "$description": "Border radius tags"
+    },
+    "cards": {
+      "$value": "20px",
+      "$type": "dimension",
+      "$description": "Border radius cards"
+    },
+    "small": {
+      "$value": "8px",
+      "$type": "dimension",
+      "$description": "Border radius small"
+    },
+    "circle": {
+      "$value": "24px",
+      "$type": "dimension",
+      "$description": "Border radius circle"
+    },
+    "inputs": {
+      "$value": "8px",
+      "$type": "dimension",
+      "$description": "Border radius inputs"
+    },
+    "buttons": {
+      "$value": "8px",
+      "$type": "dimension",
+      "$description": "Border radius buttons"
+    },
+    "default": {
+      "$value": "12px",
+      "$type": "dimension",
+      "$description": "Border radius default"
+    },
+    "navigation": {
+      "$value": "20px",
+      "$type": "dimension",
+      "$description": "Border radius navigation"
+    }
+  },
+  "surface": {
+    "linen-base": {
+      "$value": "#f6f3f0",
+      "$type": "color",
+      "$description": "Surface level 1: Page-level canvas behind the entire layout."
+    },
+    "paper-cream": {
+      "$value": "#f7f6f5",
+      "$type": "color",
+      "$description": "Surface level 2: Primary content surface and section backgrounds."
+    },
+    "ash-depth": {
+      "$value": "#ececec",
+      "$type": "color",
+      "$description": "Surface level 3: Recessed depth surface for inputs and inset wells."
+    },
+    "lift-white": {
+      "$value": "#ffffff",
+      "$type": "color",
+      "$description": "Surface level 4: Lifted cards, dropdown panels, and floating tiles."
+    },
+    "obsidian-depth": {
+      "$value": "#1a171a",
+      "$type": "color",
+      "$description": "Surface level 5: Inverted dark stage for hero scenes and code panels."
+    },
+    "graphite-lift": {
+      "$value": "#322d32",
+      "$type": "color",
+      "$description": "Surface level 6: Lifted card surface against obsidian backgrounds."
+    }
+  },
+  "shadow": {
+    "dropdown": {
+      "$value": "0 4px 40px rgba(35,31,35,0.08)",
+      "$type": "shadow",
+      "$description": "Navigation dropdowns and small floating panels."
+    },
+    "card-soft": {
+      "$value": "0 4px 80px rgba(35,31,35,0.08)",
+      "$type": "shadow",
+      "$description": "Primary card and footer elevation against cream canvas."
+    },
+    "scroll-nav": {
+      "$value": "0 4px 80px rgba(35,31,35,0.08)",
+      "$type": "shadow",
+      "$description": "Scrolled navigation bar lift."
+    }
+  },
+  "motion": {
+    "tabs": {
+      "$value": {
+        "duration": "200ms",
+        "timingFunction": "ease-in-out"
+      },
+      "$type": "transition",
+      "$description": "Tab pane in/out transitions."
+    },
+    "ui-default": {
+      "$value": {
+        "duration": "300ms",
+        "timingFunction": "ease"
+      },
+      "$type": "transition",
+      "$description": "Buttons, link hovers, background transitions."
+    },
+    "tertiary-hover": {
+      "$value": {
+        "duration": "350ms",
+        "timingFunction": "ease"
+      },
+      "$type": "transition",
+      "$description": "Tertiary CTA color shifts."
+    }
+  },
+  "breakpoint": {
+    "lg": {
+      "$value": "991px",
+      "$type": "dimension",
+      "$description": "Breakpoint lg"
+    },
+    "md": {
+      "$value": "767px",
+      "$type": "dimension",
+      "$description": "Breakpoint md"
+    },
+    "sm": {
+      "$value": "479px",
+      "$type": "dimension",
+      "$description": "Breakpoint sm"
+    }
+  },
+  "dark": {
+    "colors": {
+      "ash-depth": "#231f23",
+      "lift-white": "#322d32",
+      "linen-base": "#1a171a",
+      "paper-cream": "#1a171a",
+      "midnight-ink": "#f7f6f5"
+    },
+    "surfaces": {
+      "ink": "#f7f6f5",
+      "lift": "#322d32",
+      "canvas": "#1a171a"
+    }
+  },
+  "$extensions": {
+    "com.byq.supply.style": {
+      "url": "https://nerdstack-template.webflow.io/",
+      "siteName": "Nerdstack",
+      "themeMode": "auto",
+      "extractedAt": "2026-05-03T18:38:52.312Z",
+      "variant": "extended",
+      "generator": "byq.supply"
+    }
+  }
+}

@@ -1,0 +1,144 @@
+:root {
+  /* Colors */
+  --color-ash-depth: #ececec;
+  --color-cache-sand: #f4e7c7;
+  --color-core-coral: #ed7472;
+  --color-lift-white: #ffffff;
+  --color-linen-base: #f6f3f0;
+  --color-packet-sky: #d7e9ff;
+  --color-paper-cream: #f7f6f5;
+  --color-syntax-mint: #ccfdcf;
+  --color-midnight-ink: #231f23;
+  --color-qubit-orchid: #cebffa;
+  --color-signal-amber: #d5ad4b;
+  --color-verdant-pass: #5cce63;
+  --color-violet-quill: #4c3e5e;
+  --color-graphite-lift: #322d32;
+  --color-latency-peach: #ffe1d6;
+  --color-obsidian-depth: #1a171a;
+
+  /* Typography — Font Families */
+  --font-fragment-mono: "Fragment Mono", Arial, sans-serif, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-stacksans-text: "StackSans text Variable", Arial, sans-serif, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-stacksans-headline: "StackSans headline Variable", Arial, sans-serif, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Typography — Scale */
+  --text-caption: 10px;
+  --leading-caption: 1.2;
+  --tracking-caption: 0.75px;
+  --text-body-sm: 13px;
+  --leading-body-sm: 1.54;
+  --tracking-body-sm: 0px;
+  --text-body: 16px;
+  --leading-body: 1.5;
+  --tracking-body: 0px;
+  --text-body-lg: 20px;
+  --leading-body-lg: 1.6;
+  --tracking-body-lg: 0px;
+  --text-heading-sm: 20px;
+  --leading-heading-sm: 1.2;
+  --tracking-heading-sm: 0px;
+  --text-heading: 32px;
+  --leading-heading: 1.25;
+  --tracking-heading: 0px;
+  --text-heading-lg: 40px;
+  --leading-heading-lg: 1.2;
+  --tracking-heading-lg: -0.5px;
+  --text-display-sm: 48px;
+  --leading-display-sm: 1.17;
+  --tracking-display-sm: -0.5px;
+  --text-display: 64px;
+  --leading-display: 1.06;
+  --tracking-display: -1px;
+  --text-display-xl: 88px;
+  --leading-display-xl: 1;
+  --tracking-display-xl: -2px;
+
+  /* Typography — Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-unit: 4px;
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+  --spacing-120: 120px;
+  --spacing-160: 160px;
+  --spacing-200: 200px;
+
+  /* Layout */
+  --page-max-width: 1800px;
+  --section-gap: 160px;
+  --card-padding: 32px;
+  --element-gap: 24px;
+
+  /* Border Radius */
+  --radius-pill: 999px;
+  --radius-tags: 8px;
+  --radius-cards: 20px;
+  --radius-small: 8px;
+  --radius-circle: 24px;
+  --radius-inputs: 8px;
+  --radius-buttons: 8px;
+  --radius-default: 12px;
+  --radius-navigation: 20px;
+
+  /* Surfaces */
+  --surface-linen-base: #f6f3f0;
+  --surface-paper-cream: #f7f6f5;
+  --surface-ash-depth: #ececec;
+  --surface-lift-white: #ffffff;
+  --surface-obsidian-depth: #1a171a;
+  --surface-graphite-lift: #322d32;
+
+  /* Shadows */
+  --shadow-dropdown: 0 4px 40px rgba(35,31,35,0.08);
+  --shadow-card-soft: 0 4px 80px rgba(35,31,35,0.08);
+  --shadow-scroll-nav: 0 4px 80px rgba(35,31,35,0.08);
+
+  /* Motion */
+  --duration-tabs: 200ms;
+  --easing-tabs: ease-in-out;
+  --duration-ui-default: 300ms;
+  --easing-ui-default: ease;
+  --duration-tertiary-hover: 350ms;
+  --easing-tertiary-hover: ease;
+
+  /* Breakpoints */
+  --breakpoint-lg: 991px;
+  --breakpoint-md: 767px;
+  --breakpoint-sm: 479px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-ash-depth: #231f23;
+    --color-lift-white: #322d32;
+    --color-linen-base: #1a171a;
+    --color-paper-cream: #1a171a;
+    --color-midnight-ink: #f7f6f5;
+    --surface-ink: #f7f6f5;
+    --surface-lift: #322d32;
+    --surface-canvas: #1a171a;
+  }
+}
+
+[data-theme="dark"] {
+  --color-ash-depth: #231f23;
+  --color-lift-white: #322d32;
+  --color-linen-base: #1a171a;
+  --color-paper-cream: #1a171a;
+  --color-midnight-ink: #f7f6f5;
+  --surface-ink: #f7f6f5;
+  --surface-lift: #322d32;
+  --surface-canvas: #1a171a;
+}
