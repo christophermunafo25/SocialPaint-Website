@@ -253,8 +253,8 @@ export function StickyScrollSection() {
       iconPath: svgPaths.p27db1580,
       title: <>Give every team the power to <span className="accent-italic">create on-brand</span></>,
       description: 'Instead of waiting in line for new assets, teams can generate what they need on demand with Socialpaint, using the brand logic and creative decisions your marketing team has already put in place.',
-      buttonLabel: 'Explore Analytics',
-      buttonPath: '/products/insights',
+      buttonLabel: 'Start Creating',
+      buttonPath: '/products/content-studio',
     },
   ];
 

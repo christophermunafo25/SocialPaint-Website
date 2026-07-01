@@ -176,7 +176,7 @@ export function ClientsPage() {
               Join 500+ teams creating smarter content
             </p>
             <p className="text-[rgba(247,246,245,0.64)] text-[16px] leading-[24px] max-w-[400px]" style={{ fontWeight: 300 }}>
-              Start your free trial today. No credit card required.
+              Join the waitlist for early access — and be among the first to create on-brand content at scale.
             </p>
             <div className="flex gap-3 items-center">
               <Link to="/waitlist" className="bg-[#f7f6f5] flex gap-2 items-center justify-center px-5 py-3 rounded-lg cursor-pointer no-underline">
