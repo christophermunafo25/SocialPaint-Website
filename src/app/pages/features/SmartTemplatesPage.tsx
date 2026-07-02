@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { AnimatedSection, AnimatedItem } from '../../components/AnimatedSection';
+import { ScrollHeadline, CountUp, ZoomReveal } from '../../components/ScrollMotion';
 import { Link } from 'react-router-dom';
 import {
   LayoutTemplate, ArrowRight, Brush, MonitorSmartphone, Wrench,
@@ -222,12 +223,16 @@ export function SmartTemplatesPage() {
         <AnimatedItem delay={0.35} className="w-full max-w-[700px] mx-auto mb-8">
           <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-12">
             {[
-              { value: '200+', label: 'Templates' },
+              { value: '200+', count: 200, suffix: '+', label: 'Templates' },
               { value: '1-click', label: 'Brand adaptation' },
               { value: 'Weekly', label: 'New packs' },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col items-center gap-1">
-                <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] tracking-[-0.5px]" style={{ fontWeight: 400 }}>{stat.value}</p>
+                {stat.count ? (
+                  <CountUp to={stat.count} suffix={stat.suffix} className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] tracking-[-0.5px]" style={{ fontWeight: 400 }} />
+                ) : (
+                  <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] tracking-[-0.5px]" style={{ fontWeight: 400 }}>{stat.value}</p>
+                )}
                 <p className="font-['Fragment_Mono',monospace] text-[rgba(35,31,35,0.48)] text-[11px] tracking-[0.5px] uppercase">{stat.label}</p>
               </div>
             ))}
@@ -254,20 +259,25 @@ export function SmartTemplatesPage() {
       </section>
 
       {/* ───── Brand Adaptation Demo ───── */}
+      <ZoomReveal from={0.97}>
       <section className="bg-[#1a171a] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px] rounded-[20px] max-w-[1440px] mx-auto">
         <div className="max-w-[1240px] mx-auto">
-          <AnimatedSection className="mb-12 md:mb-16 text-center">
-            <p className="text-[#f7f6f5] text-[28px] sm:text-[40px] lg:text-[48px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.1] max-w-[720px] mx-auto mb-4" style={{ fontWeight: 400 }}>
-              One template, infinite brands
-            </p>
-            <p className="text-[rgba(247,246,245,0.5)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[600px] mx-auto" style={{ fontWeight: 300 }}>
+          <div className="mb-12 md:mb-16 text-center max-w-[720px] mx-auto">
+            <ScrollHeadline
+              text={'One template, \n infinite brands'}
+              accentWords={['infinite']}
+              dark
+              className="leading-[1.1] text-[28px] sm:text-[40px] lg:text-[48px] tracking-[-0.5px] text-center"
+            />
+            <p className="text-[rgba(247,246,245,0.5)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[600px] mx-auto mt-4" style={{ fontWeight: 300 }}>
               Watch the same template transform to match completely different brand identities — automatically.
             </p>
-          </AnimatedSection>
+          </div>
 
           <AdaptationDemo />
         </div>
       </section>
+      </ZoomReveal>
 
       {/* ───── Features Grid ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">

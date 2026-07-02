@@ -1,6 +1,24 @@
 import { useState } from 'react';
 import { AnimatedSection, AnimatedItem } from '../components/AnimatedSection';
+import { Parallax } from '../components/ScrollMotion';
 import { ArrowRight, CheckCircle, Sparkles } from 'lucide-react';
+
+/* Ambient brand halos drifting behind the form */
+function AmbientHalos() {
+  return (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      <Parallax distance={50} className="absolute top-[8%] -left-[120px] w-[420px] h-[420px]">
+        <div className="w-full h-full rounded-full opacity-[0.35]" style={{ background: 'radial-gradient(circle, #CDBCFF 0%, transparent 70%)' }} />
+      </Parallax>
+      <Parallax distance={-40} className="absolute top-[22%] -right-[140px] w-[480px] h-[480px]">
+        <div className="w-full h-full rounded-full opacity-[0.3]" style={{ background: 'radial-gradient(circle, #A7FFAC 0%, transparent 70%)' }} />
+      </Parallax>
+      <Parallax distance={30} className="absolute bottom-[4%] left-[16%] w-[380px] h-[380px]">
+        <div className="w-full h-full rounded-full opacity-[0.25]" style={{ background: 'radial-gradient(circle, #FFC5B0 0%, transparent 70%)' }} />
+      </Parallax>
+    </div>
+  );
+}
 
 export function WaitlistPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -15,8 +33,9 @@ export function WaitlistPage() {
   };
 
   return (
-    <div className="w-full pt-[140px] sm:pt-[180px] lg:pt-[200px] pb-16 sm:pb-24 max-w-[1440px] mx-auto px-4 sm:px-8">
-      <AnimatedSection className="flex flex-col items-center text-center gap-6 mb-12 md:mb-16">
+    <div className="w-full pt-[140px] sm:pt-[180px] lg:pt-[200px] pb-16 sm:pb-24 max-w-[1440px] mx-auto px-4 sm:px-8 relative overflow-x-clip">
+      <AmbientHalos />
+      <AnimatedSection className="flex flex-col items-center text-center gap-6 mb-12 md:mb-16 relative z-10">
         <AnimatedItem>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[rgba(35,31,35,0.06)]">
             <Sparkles size={14} color="#231f23" />
@@ -35,7 +54,7 @@ export function WaitlistPage() {
         </AnimatedItem>
       </AnimatedSection>
 
-      <AnimatedItem delay={0.3} className="w-full max-w-[640px] mx-auto">
+      <AnimatedItem delay={0.3} className="w-full max-w-[640px] mx-auto relative z-10">
         {!submitted ? (
           <form onSubmit={handleSubmit} className="flex flex-col gap-5 bg-white rounded-[20px] p-6 sm:p-8 border border-[rgba(35,31,35,0.08)]">
             <div className="flex flex-col gap-1.5">

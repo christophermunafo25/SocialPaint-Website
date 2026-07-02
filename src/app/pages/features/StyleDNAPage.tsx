@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { AnimatedSection, AnimatedItem } from '../../components/AnimatedSection';
+import { ScrollHeadline, ZoomReveal } from '../../components/ScrollMotion';
 import { Link } from 'react-router-dom';
 import {
   Fingerprint, Palette, Type, LayoutGrid, MessageCircle, Image,
@@ -168,13 +169,17 @@ export function StyleDNAPage() {
       </section>
 
       {/* ───── How It Learns — Dark Horizontal Timeline ───── */}
+      <ZoomReveal from={0.97}>
       <section className="bg-[#1a171a] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px] rounded-[20px] max-w-[1440px] mx-auto">
         <div className="max-w-[1240px] mx-auto">
-          <AnimatedSection className="mb-12 md:mb-20">
-            <p className="text-[#f7f6f5] text-[28px] sm:text-[40px] lg:text-[48px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.1] text-center max-w-[720px] mx-auto" style={{ fontWeight: 400 }}>
-              From your design files to a living brand system
-            </p>
-          </AnimatedSection>
+          <div className="mb-12 md:mb-20 max-w-[720px] mx-auto">
+            <ScrollHeadline
+              text={'From your design files \n to a living brand system'}
+              accentWords={['living']}
+              dark
+              className="leading-[1.1] text-[28px] sm:text-[40px] lg:text-[48px] tracking-[-0.5px] text-center"
+            />
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 relative">
             {/* Connecting line */}
@@ -196,6 +201,7 @@ export function StyleDNAPage() {
           </div>
         </div>
       </section>
+      </ZoomReveal>
 
       {/* ───── Living System Section ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">

@@ -1,15 +1,16 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { AnimatedSection, AnimatedItem } from '../../components/AnimatedSection';
+import { ScrollHeadline, CountUp, ZoomReveal } from '../../components/ScrollMotion';
 import { Link } from 'react-router-dom';
 import {
   Lightbulb, ArrowRight, TrendingUp, BarChart3, Flame,
   Globe, Users, Activity, Clock, Instagram, Linkedin, Twitter, ArrowUpRight, ArrowDownRight
 } from 'lucide-react';
 
-/* ─── Animated Metric Card ─── */
-function MetricCard({ label, value, change, positive, color, delay = 0 }: {
-  label: string; value: string; change: string; positive: boolean; color: string; delay?: number;
+/* ─── Animated Metric Card — value counts up on view ─── */
+function MetricCard({ label, to, decimals = 0, suffix = '', change, positive, color, delay = 0 }: {
+  label: string; to: number; decimals?: number; suffix?: string; change: string; positive: boolean; color: string; delay?: number;
 }) {
   return (
     <AnimatedItem delay={delay}>
@@ -21,7 +22,7 @@ function MetricCard({ label, value, change, positive, color, delay = 0 }: {
           <div className="w-2 h-2 rounded-full" style={{ backgroundColor: color }} />
           <p className="font-['Fragment_Mono',monospace] text-[rgba(35,31,35,0.48)] text-[11px] tracking-[0.75px] uppercase">{label}</p>
         </div>
-        <p className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] tracking-[-0.5px] mb-1" style={{ fontWeight: 400 }}>{value}</p>
+        <CountUp to={to} decimals={decimals} suffix={suffix} className="text-[#231f23] text-[28px] font-[Stack_Sans_Headline] sm:text-[36px] tracking-[-0.5px] mb-1" style={{ fontWeight: 400 }} />
         <div className="flex items-center gap-1">
           {positive ? (
             <ArrowUpRight size={14} color="#4a7c59" />
@@ -215,10 +216,10 @@ export function InsightsPage() {
 
         {/* Dashboard Metrics Grid */}
         <div className="w-full max-w-[1240px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <MetricCard label="Total Reach" value="284K" change="+23%" positive={true} color="#A7FFAC" delay={0.35} />
-          <MetricCard label="Engagement" value="4.8%" change="+0.6%" positive={true} color="#A6CEFF" delay={0.4} />
-          <MetricCard label="Brand Score" value="96" change="+3pts" positive={true} color="#CDBCFF" delay={0.45} />
-          <MetricCard label="Content Created" value="847" change="+142" positive={true} color="#FFED8C" delay={0.5} />
+          <MetricCard label="Total Reach" to={284} suffix="K" change="+23%" positive={true} color="#A7FFAC" delay={0.35} />
+          <MetricCard label="Engagement" to={4.8} decimals={1} suffix="%" change="+0.6%" positive={true} color="#A6CEFF" delay={0.4} />
+          <MetricCard label="Brand Score" to={96} change="+3pts" positive={true} color="#CDBCFF" delay={0.45} />
+          <MetricCard label="Content Created" to={847} change="+142" positive={true} color="#FFED8C" delay={0.5} />
         </div>
       </section>
 
@@ -248,14 +249,18 @@ export function InsightsPage() {
       </section>
 
       {/* ───── Engagement Heatmap — Dark Section ───── */}
+      <ZoomReveal from={0.97}>
       <section className="bg-[#1a171a] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px] rounded-[20px] max-w-[1440px] mx-auto">
         <div className="max-w-[1240px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
             <AnimatedSection className="flex-1">
               <div className="flex flex-col gap-6">
-                <p className="text-[#f7f6f5] text-[28px] sm:text-[36px] font-[Stack_Sans_Headline] lg:text-[40px] tracking-[-0.5px] leading-[1.15]" style={{ fontWeight: 400 }}>
-                  Find your audience's sweet spot
-                </p>
+                <ScrollHeadline
+                  text={"Find your audience's sweet spot"}
+                  accentWords={['sweet', 'spot']}
+                  dark
+                  className="leading-[1.15] text-[28px] sm:text-[36px] lg:text-[40px] tracking-[-0.5px]"
+                />
                 <p className="text-[rgba(247,246,245,0.5)] text-[14px] sm:text-[16px] leading-[1.5]" style={{ fontWeight: 300 }}>
                   The engagement heatmap shows exactly when your audience is most active and responsive. Stop guessing posting times — use data.
                 </p>
@@ -281,6 +286,7 @@ export function InsightsPage() {
           </div>
         </div>
       </section>
+      </ZoomReveal>
 
       {/* ───── Platform Comparison ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">

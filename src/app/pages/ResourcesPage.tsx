@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
 import { AnimatedSection, AnimatedItem } from '../components/AnimatedSection';
+import { ScrollHeadline, Parallax, ZoomReveal } from '../components/ScrollMotion';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import {
   BookOpen, FileText, Code, Download, Presentation, Video,
@@ -46,7 +48,11 @@ const blogPosts: Resource[] = [
 function ResourceCard({ resource }: { resource: Resource }) {
   const Icon = resource.icon;
   return (
-    <div className="bg-white rounded-[16px] p-6 border border-[rgba(35,31,35,0.08)] hover:shadow-[0px_4px_40px_0px_rgba(0,0,0,0.06)] transition-all cursor-pointer h-full flex flex-col">
+    <motion.div
+      className="bg-white rounded-[16px] p-6 border border-[rgba(35,31,35,0.08)] cursor-pointer h-full flex flex-col"
+      whileHover={{ y: -4, boxShadow: '0px 8px 40px rgba(0,0,0,0.06)' }}
+      transition={{ duration: 0.25 }}
+    >
       <div className="flex items-center gap-3 mb-4">
         <div className="w-10 h-10 rounded-[10px] flex items-center justify-center shrink-0" style={{ backgroundColor: resource.color }}>
           <Icon size={18} color="#231f23" />
@@ -55,13 +61,13 @@ function ResourceCard({ resource }: { resource: Resource }) {
       </div>
       <p className="text-[#231f23] text-[16px] mb-2 leading-[1.3]" style={{ fontWeight: 500 }}>{resource.title}</p>
       <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5] flex-1" style={{ fontWeight: 300 }}>{resource.description}</p>
-    </div>
+    </motion.div>
   );
 }
 
 export function ResourcesPage() {
   return (
-    <div className="w-full pt-[140px] sm:pt-[180px] lg:pt-[200px] pb-0 max-w-[1440px] mx-auto">
+    <div className="w-full pt-[140px] sm:pt-[180px] lg:pt-[200px] pb-0 max-w-[1440px] mx-auto overflow-x-clip">
       {/* ───── Hero ───── */}
       <section className="px-4 sm:px-8 pb-16 md:pb-24">
         <AnimatedSection className="flex flex-col items-center text-center gap-6">
@@ -84,16 +90,18 @@ export function ResourcesPage() {
         </AnimatedSection>
       </section>
 
-      {/* ───── Featured Article ───── */}
+      {/* ───── Featured Article — parallax image in masked frame ───── */}
       <section className="px-4 sm:px-8 pb-16 md:pb-20">
-        <AnimatedSection className="w-full max-w-[1240px] mx-auto">
+        <ZoomReveal className="w-full max-w-[1240px] mx-auto">
           <div className="bg-[#ececec] rounded-[20px] overflow-hidden flex flex-col lg:flex-row">
-            <div className="relative h-[240px] lg:h-auto lg:w-[480px] shrink-0">
-              <ImageWithFallback
-                src={featuredArticle.image}
-                alt={featuredArticle.title}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+            <div className="relative h-[240px] lg:h-auto lg:w-[480px] shrink-0 overflow-hidden">
+              <Parallax distance={-30} className="absolute -inset-y-[50px] inset-x-0">
+                <ImageWithFallback
+                  src={featuredArticle.image}
+                  alt={featuredArticle.title}
+                  className="w-full h-[calc(100%+100px)] object-cover"
+                />
+              </Parallax>
             </div>
             <div className="flex-1 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
               <div className="flex gap-2 items-center px-3 py-1.5 rounded-lg self-start mb-5" style={{ backgroundColor: featuredArticle.color }}>
@@ -112,7 +120,7 @@ export function ResourcesPage() {
               </Link>
             </div>
           </div>
-        </AnimatedSection>
+        </ZoomReveal>
       </section>
 
       {/* ───── Guides & Getting Started ───── */}
@@ -130,7 +138,7 @@ export function ResourcesPage() {
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {guides.map((r, i) => (
-              <AnimatedItem key={r.title} delay={i * 0.05}>
+              <AnimatedItem key={r.title} delay={i * 0.08} direction={i === 0 ? 'right' : i === 2 ? 'left' : 'up'}>
                 <ResourceCard resource={r} />
               </AnimatedItem>
             ))}
@@ -148,16 +156,23 @@ export function ResourcesPage() {
               </div>
               <p className="font-['Fragment_Mono',monospace] text-[rgba(247,246,245,0.48)] text-[12px] tracking-[0.75px] uppercase">For developers</p>
             </div>
-            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15]">
-              Build on the SocialPaint API
-            </p>
+            <ScrollHeadline
+              text={'Build on the SocialPaint API'}
+              accentWords={['API']}
+              dark
+              className="leading-[1.15] text-[24px] sm:text-[32px] tracking-[-0.5px]"
+            />
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {developerResources.map((r, i) => {
               const Icon = r.icon;
               return (
                 <AnimatedItem key={r.title} delay={i * 0.08}>
-                  <div className="bg-[rgba(247,246,245,0.04)] rounded-[16px] p-6 sm:p-8 border border-[rgba(247,246,245,0.08)] h-full cursor-pointer hover:bg-[rgba(247,246,245,0.06)] transition-colors">
+                  <motion.div
+                    className="bg-[rgba(247,246,245,0.04)] rounded-[16px] p-6 sm:p-8 border border-[rgba(247,246,245,0.08)] h-full cursor-pointer"
+                    whileHover={{ backgroundColor: 'rgba(247,246,245,0.07)', y: -4 }}
+                    transition={{ duration: 0.25 }}
+                  >
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 rounded-[10px] flex items-center justify-center shrink-0" style={{ backgroundColor: r.color }}>
                         <Icon size={18} color="#231f23" />
@@ -166,7 +181,7 @@ export function ResourcesPage() {
                     </div>
                     <p className="text-[#f7f6f5] text-[16px] sm:text-[18px] mb-2" style={{ fontWeight: 500 }}>{r.title}</p>
                     <p className="text-[rgba(247,246,245,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{r.description}</p>
-                  </div>
+                  </motion.div>
                 </AnimatedItem>
               );
             })}
@@ -174,10 +189,10 @@ export function ResourcesPage() {
         </div>
       </section>
 
-      {/* ───── Blog & News ───── */}
+      {/* ───── Blog & News — editorial index ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
         <div className="max-w-[1240px] mx-auto">
-          <AnimatedSection className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 md:mb-12">
+          <AnimatedSection className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6 md:mb-8">
             <div className="flex flex-col gap-4 items-start">
               <div className="flex gap-2 items-center px-3 py-2 rounded-lg relative">
                 <div aria-hidden="true" className="absolute border border-[rgba(35,31,35,0.08)] border-solid inset-0 pointer-events-none rounded-lg" />
@@ -188,36 +203,71 @@ export function ResourcesPage() {
                 Latest from SocialPaint
               </p>
             </div>
+            <p className="font-['Fragment_Mono',monospace] text-[rgba(35,31,35,0.32)] text-[11px] tracking-[0.75px] uppercase">Index / {String(blogPosts.length).padStart(2, '0')} entries</p>
           </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.map((r, i) => (
-              <AnimatedItem key={r.title} delay={i * 0.05}>
-                <ResourceCard resource={r} />
-              </AnimatedItem>
-            ))}
+
+          {/* Contents-style index list */}
+          <div className="flex flex-col">
+            {blogPosts.map((r, i) => {
+              const Icon = r.icon;
+              return (
+                <AnimatedItem key={r.title} delay={i * 0.04}>
+                  <motion.div
+                    className="group flex items-start sm:items-center gap-4 sm:gap-8 py-6 sm:py-7 border-b border-[rgba(35,31,35,0.08)] cursor-pointer"
+                    whileHover={{ x: 10 }}
+                    transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+                  >
+                    <p className="font-['Fragment_Mono',monospace] text-[rgba(35,31,35,0.24)] text-[13px] tracking-[0.75px] w-8 shrink-0 pt-1 sm:pt-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </p>
+                    <div className="w-9 h-9 rounded-[9px] hidden sm:flex items-center justify-center shrink-0" style={{ backgroundColor: r.color }}>
+                      <Icon size={16} color="#231f23" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-3 flex-wrap">
+                        <p className="text-[#231f23] text-[17px] sm:text-[20px] tracking-[-0.25px] leading-[1.3]" style={{ fontWeight: 400 }}>{r.title}</p>
+                        <p className="font-['Fragment_Mono',monospace] text-[rgba(35,31,35,0.4)] text-[10px] tracking-[0.75px] uppercase px-2 py-0.5 rounded-full border border-[rgba(35,31,35,0.12)]">{r.type}</p>
+                      </div>
+                      <p className="text-[rgba(35,31,35,0.56)] text-[13px] sm:text-[14px] leading-[1.5] mt-1 max-w-[640px] sm:opacity-0 sm:group-hover:opacity-100 sm:transition-opacity sm:duration-300" style={{ fontWeight: 300 }}>
+                        {r.description}
+                      </p>
+                    </div>
+                    <ArrowRight size={18} className="shrink-0 text-[rgba(35,31,35,0.2)] group-hover:text-[#231f23] transition-colors mt-1 sm:mt-0" />
+                  </motion.div>
+                </AnimatedItem>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* ───── Newsletter CTA ───── */}
       <section className="px-4 sm:px-8 pb-16 sm:pb-20 lg:pb-[120px]">
-        <AnimatedSection className="w-full max-w-[800px] mx-auto">
-          <div className="bg-[#231f23] rounded-[20px] p-8 sm:p-12 flex flex-col items-center text-center gap-6">
-            <div className="w-12 h-12 rounded-full bg-[rgba(247,246,245,0.08)] flex items-center justify-center">
+        <ZoomReveal className="w-full max-w-[800px] mx-auto">
+          <div className="bg-[#231f23] rounded-[20px] p-8 sm:p-12 flex flex-col items-center text-center gap-6 relative overflow-hidden">
+            {/* Ambient halo drifting behind content */}
+            <Parallax distance={30} className="absolute -top-24 -right-24 w-[320px] h-[320px] pointer-events-none">
+              <div className="w-full h-full rounded-full opacity-30" style={{ background: 'radial-gradient(circle, #CDBCFF 0%, transparent 70%)' }} />
+            </Parallax>
+            <Parallax distance={-24} className="absolute -bottom-28 -left-20 w-[280px] h-[280px] pointer-events-none">
+              <div className="w-full h-full rounded-full opacity-25" style={{ background: 'radial-gradient(circle, #A7FFAC 0%, transparent 70%)' }} />
+            </Parallax>
+
+            <div className="w-12 h-12 rounded-full bg-[rgba(247,246,245,0.08)] flex items-center justify-center relative z-10">
               <Mail size={22} color="#f7f6f5" />
             </div>
-            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15]">
+            <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] relative z-10">
               Stay up to date with SocialPaint
             </p>
-            <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[400px]" style={{ fontWeight: 300 }}>
+            <p className="text-[rgba(247,246,245,0.64)] text-[14px] sm:text-[16px] leading-[1.5] max-w-[400px] relative z-10" style={{ fontWeight: 300 }}>
               Get product updates, content tips, and brand strategy insights delivered to your inbox.
             </p>
-            <Link to="/waitlist" className="bg-[#f7f6f5] flex gap-2 items-center justify-center px-5 py-3 rounded-lg cursor-pointer no-underline">
+            <Link to="/waitlist" className="bg-[#f7f6f5] flex gap-2 items-center justify-center px-5 py-3 rounded-lg cursor-pointer no-underline relative z-10">
               <p className="text-[#231f23] text-[14px] sm:text-[16px] whitespace-nowrap">Subscribe to Newsletter</p>
               <ArrowRight size={16} color="#231f23" />
             </Link>
           </div>
-        </AnimatedSection>
+        </ZoomReveal>
       </section>
     </div>
   );

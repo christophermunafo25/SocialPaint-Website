@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { AnimatedSection, AnimatedItem } from '../components/AnimatedSection';
+import { Marquee, ZoomReveal, ScrollHeadline } from '../components/ScrollMotion';
 import { Check, X, ArrowRight, Sparkles, ShieldCheck, Zap } from 'lucide-react';
 
 const plans = [
@@ -70,7 +71,7 @@ export function PricingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <div className="w-full pt-[140px] sm:pt-[180px] lg:pt-[200px] pb-0 max-w-[1440px] mx-auto">
+    <div className="w-full pt-[140px] sm:pt-[180px] lg:pt-[200px] pb-0 max-w-[1440px] mx-auto overflow-x-clip">
       {/* ───── Hero ───── */}
       <section className="px-4 sm:px-8 pb-16 md:pb-24">
         <AnimatedSection className="flex flex-col items-center text-center gap-6 mb-8">
@@ -107,17 +108,25 @@ export function PricingPage() {
           </button>
           <p className={`text-[14px] transition-colors ${annual ? 'text-[#231f23]' : 'text-[rgba(35,31,35,0.48)]'}`} style={{ fontWeight: 500 }}>Annual</p>
           {annual && (
-            <div className="bg-[#A7FFAC] px-2.5 py-1 rounded-full">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="bg-[#A7FFAC] px-2.5 py-1 rounded-full"
+            >
               <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[10px] tracking-[0.5px] uppercase">Save 20%</p>
-            </div>
+            </motion.div>
           )}
         </AnimatedItem>
 
-        {/* Plans */}
+        {/* Plans — staggered rise, Pro elevated on desktop */}
         <div className="w-full max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
           {plans.map((plan, i) => (
-            <AnimatedItem key={plan.name} delay={i * 0.1}>
-              <div className={`rounded-[20px] p-8 ${plan.highlighted ? 'bg-[#231f23] text-[#f7f6f5] ring-2 ring-[rgba(247,246,245,0.12)]' : 'bg-white border border-[rgba(35,31,35,0.08)]'}`}>
+            <AnimatedItem key={plan.name} delay={plan.highlighted ? 0 : 0.12 + i * 0.06} className={plan.highlighted ? 'lg:-mt-5' : ''}>
+              <motion.div
+                className={`rounded-[20px] p-8 ${plan.highlighted ? 'bg-[#231f23] text-[#f7f6f5] ring-2 ring-[rgba(247,246,245,0.12)] shadow-[0px_20px_60px_rgba(35,31,35,0.18)]' : 'bg-white border border-[rgba(35,31,35,0.08)]'}`}
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+              >
                 {plan.highlighted && (
                   <div className="bg-[#A7FFAC] px-3 py-1 rounded-full inline-flex mb-4">
                     <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[10px] tracking-[0.75px] uppercase">Most popular</p>
@@ -126,8 +135,18 @@ export function PricingPage() {
                 <p className={`font-['Fragment_Mono',monospace] text-[12px] tracking-[0.75px] uppercase mb-4 ${plan.highlighted ? 'text-[rgba(247,246,245,0.48)]' : 'text-[rgba(35,31,35,0.48)]'}`}>
                   {plan.name}
                 </p>
-                <div className="flex items-baseline gap-1 mb-2">
-                  <p className="text-[40px] sm:text-[48px] tracking-[-1px]" style={{ fontWeight: 500 }}>{annual ? plan.annualPrice : plan.monthlyPrice}</p>
+                <div className="flex items-baseline gap-1 mb-2 relative h-[58px] sm:h-[66px] overflow-hidden">
+                  {/* Price flips when the billing period changes */}
+                  <motion.p
+                    key={annual ? plan.annualPrice : plan.monthlyPrice}
+                    initial={{ y: 24, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+                    className="text-[40px] sm:text-[48px] tracking-[-1px]"
+                    style={{ fontWeight: 500 }}
+                  >
+                    {annual ? plan.annualPrice : plan.monthlyPrice}
+                  </motion.p>
                   {plan.period && (
                     <p className={`text-[16px] ${plan.highlighted ? 'text-[rgba(247,246,245,0.48)]' : 'text-[rgba(35,31,35,0.48)]'}`} style={{ fontWeight: 300 }}>
                       {plan.period}
@@ -145,51 +164,62 @@ export function PricingPage() {
                   <ArrowRight size={16} />
                 </Link>
                 <div className="flex flex-col gap-3">
-                  {plan.features.map((feature) => (
-                    <div key={feature} className="flex items-center gap-3">
+                  {plan.features.map((feature, fi) => (
+                    <motion.div
+                      key={feature}
+                      className="flex items-center gap-3"
+                      initial={{ opacity: 0, x: -12 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, margin: '-20px' }}
+                      transition={{ delay: 0.2 + fi * 0.04, duration: 0.35 }}
+                    >
                       <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${plan.highlighted ? 'bg-[#A7FFAC]' : 'bg-[rgba(35,31,35,0.06)]'}`}>
                         <Check size={12} color="#231f23" strokeWidth={2.5} />
                       </div>
                       <p className={`text-[14px] ${plan.highlighted ? 'text-[rgba(247,246,245,0.8)]' : 'text-[rgba(35,31,35,0.64)]'}`} style={{ fontWeight: 300 }}>
                         {feature}
                       </p>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </AnimatedItem>
           ))}
         </div>
       </section>
 
-      {/* ───── Trust Strip ───── */}
-      <section className="px-4 sm:px-8 py-8 sm:py-12">
-        <AnimatedItem className="w-full max-w-[1240px] mx-auto">
-          <div className="bg-[#ececec] rounded-[20px] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
+      {/* ───── Trust Marquee ───── */}
+      <section className="py-8 sm:py-12">
+        <AnimatedItem>
+          <Marquee duration={26}>
             {[
               { icon: ShieldCheck, text: 'SOC 2 compliant' },
               { icon: Zap, text: '99.9% uptime SLA' },
               { icon: Sparkles, text: 'No credit card for free tier' },
+              { icon: ShieldCheck, text: 'Credentials encrypted end-to-end' },
+              { icon: Zap, text: '14-day Pro trial' },
             ].map((item) => (
-              <div key={item.text} className="flex items-center gap-2">
+              <div key={item.text} className="flex items-center gap-2 px-6 whitespace-nowrap">
                 <item.icon size={16} color="rgba(35,31,35,0.48)" />
                 <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{item.text}</p>
               </div>
             ))}
-          </div>
+          </Marquee>
         </AnimatedItem>
       </section>
 
-      {/* ───── Comparison Table ───── */}
+      {/* ───── Comparison Table — rows cascade in ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
         <div className="max-w-[1240px] mx-auto">
-          <AnimatedSection className="mb-10 md:mb-12">
-            <p className="text-[#231f23] text-[24px] sm:text-[32px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] text-center">
-              Compare plans
-            </p>
+          <AnimatedSection className="mb-10 md:mb-12 flex justify-center">
+            <ScrollHeadline
+              text={'Compare every plan, feature by feature'}
+              accentWords={['feature']}
+              className="leading-[1.15] text-[24px] sm:text-[32px] tracking-[-0.5px] text-center"
+            />
           </AnimatedSection>
 
-          <AnimatedItem>
+          <ZoomReveal from={0.97}>
             <div className="bg-white rounded-[20px] border border-[rgba(35,31,35,0.08)] overflow-x-auto">
               <div className="min-w-[560px]">
               {/* Header */}
@@ -198,27 +228,34 @@ export function PricingPage() {
                   <p className="font-['Fragment_Mono',monospace] text-[rgba(35,31,35,0.48)] text-[11px] tracking-[0.75px] uppercase">Feature</p>
                 </div>
                 {['Starter', 'Pro', 'Enterprise'].map((name) => (
-                  <div key={name} className="p-4 sm:p-5 text-center">
+                  <div key={name} className={`p-4 sm:p-5 text-center ${name === 'Pro' ? 'bg-[rgba(35,31,35,0.03)]' : ''}`}>
                     <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[11px] tracking-[0.75px] uppercase">{name}</p>
                   </div>
                 ))}
               </div>
-              {/* Rows */}
+              {/* Rows cascade */}
               {comparisonRows.map((row, i) => (
-                <div key={row.feature} className={`grid grid-cols-4 ${i < comparisonRows.length - 1 ? 'border-b border-[rgba(35,31,35,0.06)]' : ''}`}>
+                <motion.div
+                  key={row.feature}
+                  className={`grid grid-cols-4 ${i < comparisonRows.length - 1 ? 'border-b border-[rgba(35,31,35,0.06)]' : ''}`}
+                  initial={{ opacity: 0, x: -16 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ delay: i * 0.05, duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+                >
                   <div className="p-4 sm:p-5 flex items-center">
                     <p className="text-[#231f23] text-[13px] sm:text-[14px]" style={{ fontWeight: 300 }}>{row.feature}</p>
                   </div>
                   {[row.starter, row.pro, row.enterprise].map((val, vi) => (
-                    <div key={vi} className="p-4 sm:p-5 flex items-center justify-center">
+                    <div key={vi} className={`p-4 sm:p-5 flex items-center justify-center ${vi === 1 ? 'bg-[rgba(35,31,35,0.03)]' : ''}`}>
                       <CellValue value={val} />
                     </div>
                   ))}
-                </div>
+                </motion.div>
               ))}
               </div>
             </div>
-          </AnimatedItem>
+          </ZoomReveal>
         </div>
       </section>
 

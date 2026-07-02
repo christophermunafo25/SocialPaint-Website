@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, useScroll, useTransform, useMotionValueEvent, AnimatePresence } from 'motion/react';
 import { AnimatedSection, AnimatedItem } from '../../components/AnimatedSection';
+import { ScrollHeadline, ZoomReveal } from '../../components/ScrollMotion';
 import { Link } from 'react-router-dom';
 import {
   ShieldCheck, ArrowRight, Check, X, AlertTriangle,
@@ -179,13 +180,17 @@ export function BrandGuardPage() {
       </section>
 
       {/* ───── Features — Dark Section ───── */}
+      <ZoomReveal from={0.97}>
       <section className="bg-[#1a171a] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px] rounded-[20px] max-w-[1440px] mx-auto">
         <div className="max-w-[1240px] mx-auto">
-          <AnimatedSection className="mb-12 md:mb-16 text-center">
-            <p className="text-[#f7f6f5] text-[28px] sm:text-[40px] lg:text-[48px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.1] max-w-[720px] mx-auto" style={{ fontWeight: 400 }}>
-              More than a spell-check for your brand
-            </p>
-          </AnimatedSection>
+          <div className="mb-12 md:mb-16 max-w-[720px] mx-auto">
+            <ScrollHeadline
+              text={'More than a spell-check \n for your brand'}
+              accentWords={['spell-check']}
+              dark
+              className="leading-[1.1] text-[28px] sm:text-[40px] lg:text-[48px] tracking-[-0.5px] text-center"
+            />
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {WORKFLOW_FEATURES.map((feature, i) => {
@@ -208,6 +213,7 @@ export function BrandGuardPage() {
           </div>
         </div>
       </section>
+      </ZoomReveal>
 
       {/* ───── Before / After Strip ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">

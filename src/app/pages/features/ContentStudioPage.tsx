@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { AnimatedSection, AnimatedItem } from '../../components/AnimatedSection';
+import { ScrollHeadline, CountUp, ZoomReveal } from '../../components/ScrollMotion';
 import { Link } from 'react-router-dom';
 import {
   Layers, ArrowRight, Instagram, Linkedin, Twitter,
@@ -158,15 +159,15 @@ export function ContentStudioPage() {
         <AnimatedItem delay={0.35} className="w-full max-w-[800px] mx-auto mb-12 md:mb-16">
           <div className="grid grid-cols-3 gap-4">
             {[
-              { value: '10s', label: 'Avg. generation time', icon: Clock },
-              { value: '6+', label: 'Platforms supported', icon: Maximize },
-              { value: '3x', label: 'Content output increase', icon: Zap },
+              { to: 10, suffix: 's', label: 'Avg. generation time', icon: Clock },
+              { to: 6, suffix: '+', label: 'Platforms supported', icon: Maximize },
+              { to: 3, suffix: 'x', label: 'Content output increase', icon: Zap },
             ].map((stat) => {
               const StatIcon = stat.icon;
               return (
                 <div key={stat.label} className="bg-[#ececec] rounded-[16px] p-4 sm:p-6 flex flex-col gap-2 items-center text-center">
                   <StatIcon size={16} color="rgba(35,31,35,0.32)" />
-                  <p className="text-[#231f23] text-[24px] font-[Stack_Sans_Headline] sm:text-[32px] tracking-[-0.5px]" style={{ fontWeight: 400 }}>{stat.value}</p>
+                  <CountUp to={stat.to} suffix={stat.suffix} className="text-[#231f23] text-[24px] font-[Stack_Sans_Headline] sm:text-[32px] tracking-[-0.5px]" style={{ fontWeight: 400 }} />
                   <p className="font-['Fragment_Mono',monospace] text-[rgba(35,31,35,0.48)] text-[10px] sm:text-[11px] tracking-[0.5px] uppercase">{stat.label}</p>
                 </div>
               );
@@ -197,13 +198,17 @@ export function ContentStudioPage() {
       </section>
 
       {/* ───── Content Types — Dark Bento Grid ───── */}
+      <ZoomReveal from={0.97}>
       <section className="bg-[#1a171a] w-full px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px] rounded-[20px] max-w-[1440px] mx-auto">
         <div className="max-w-[1240px] mx-auto">
-          <AnimatedSection className="mb-12 md:mb-16 text-center">
-            <p className="text-[#f7f6f5] text-[28px] sm:text-[40px] lg:text-[48px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.1] max-w-[680px] mx-auto" style={{ fontWeight: 400 }}>
-              Every content type your team needs
-            </p>
-          </AnimatedSection>
+          <div className="mb-12 md:mb-16 max-w-[680px] mx-auto">
+            <ScrollHeadline
+              text={'Every content type \n your team needs'}
+              accentWords={['every', 'Every']}
+              dark
+              className="leading-[1.1] text-[28px] sm:text-[40px] lg:text-[48px] tracking-[-0.5px] text-center"
+            />
+          </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {CONTENT_TYPES.map((ct, i) => (
@@ -223,6 +228,7 @@ export function ContentStudioPage() {
           </div>
         </div>
       </section>
+      </ZoomReveal>
 
       {/* ───── Team Scaling Section ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">

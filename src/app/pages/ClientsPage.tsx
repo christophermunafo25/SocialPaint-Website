@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
 import { AnimatedSection, AnimatedItem } from '../components/AnimatedSection';
+import { ScrollHeadline, Parallax, ZoomReveal, Marquee, CountUp } from '../components/ScrollMotion';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { ArrowRight, TrendingUp, Clock, Users, Sparkles, Quote } from 'lucide-react';
 
-const heroStats = [
-  { value: '500+', label: 'Teams using SocialPaint', icon: Users },
-  { value: '10x', label: 'Average output increase', icon: TrendingUp },
-  { value: '98%', label: 'Brand consistency score', icon: Sparkles },
-  { value: '< 10min', label: 'To first content piece', icon: Clock },
+/* Stats count up from zero — proof accumulating as you arrive */
+const heroStats: { to: number; prefix?: string; suffix?: string; label: string; icon: typeof Users }[] = [
+  { to: 500, suffix: '+', label: 'Teams using SocialPaint', icon: Users },
+  { to: 10, suffix: 'x', label: 'Average output increase', icon: TrendingUp },
+  { to: 98, suffix: '%', label: 'Brand consistency score', icon: Sparkles },
+  { to: 10, prefix: '< ', suffix: 'min', label: 'To first content piece', icon: Clock },
 ];
 
 const featured = {
@@ -31,9 +34,38 @@ const testimonials = [
   { name: 'Sam Okafor', role: 'VP Marketing', company: 'Meridian Labs', industry: 'SaaS', stat: '2-day → 10-min onboarding', quote: 'New marketers understand our brand system in minutes instead of days. The learning curve basically vanished.', color: '#CDBCFF' },
 ];
 
+function TestimonialCard({ t }: { t: (typeof testimonials)[number] }) {
+  return (
+    <motion.div
+      className="bg-white rounded-[20px] p-6 sm:p-8 border border-[rgba(35,31,35,0.08)] flex flex-col"
+      whileHover={{ y: -4, boxShadow: '0px 8px 40px rgba(0,0,0,0.06)' }}
+      transition={{ duration: 0.25 }}
+    >
+      <div className="flex items-center justify-between mb-5 gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ backgroundColor: t.color }}>
+            <Quote size={14} color="#231f23" />
+          </div>
+          <p className="text-[rgba(35,31,35,0.48)] text-[14px] leading-[1.5] truncate" style={{ fontWeight: 500 }}>{t.company}</p>
+        </div>
+        <div className="px-2.5 py-1 rounded-full bg-[#A7FFAC] shrink-0">
+          <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[10px] tracking-[0.5px] uppercase">{t.stat}</p>
+        </div>
+      </div>
+      <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5] flex-1 mb-6" style={{ fontWeight: 300 }}>
+        "{t.quote}"
+      </p>
+      <div className="flex flex-col gap-0.5">
+        <p className="text-[#231f23] text-[14px]" style={{ fontWeight: 500 }}>{t.name}</p>
+        <p className="text-[rgba(35,31,35,0.48)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{t.role}</p>
+      </div>
+    </motion.div>
+  );
+}
+
 export function ClientsPage() {
   return (
-    <div className="w-full pt-[140px] sm:pt-[180px] lg:pt-[200px] pb-0 max-w-[1440px] mx-auto">
+    <div className="w-full pt-[140px] sm:pt-[180px] lg:pt-[200px] pb-0 max-w-[1440px] mx-auto overflow-x-clip">
       {/* ───── Hero ───── */}
       <section className="px-4 sm:px-8 pb-16 md:pb-24">
         <AnimatedSection className="flex flex-col items-center text-center gap-6 mb-12 md:mb-16">
@@ -55,7 +87,7 @@ export function ClientsPage() {
           </AnimatedItem>
         </AnimatedSection>
 
-        {/* Stats bar */}
+        {/* Stats bar — numbers count up as proof accumulates */}
         <AnimatedItem delay={0.3} className="w-full max-w-[1240px] mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {heroStats.map((stat) => {
@@ -63,7 +95,13 @@ export function ClientsPage() {
               return (
                 <div key={stat.label} className="bg-white rounded-[16px] p-6 border border-[rgba(35,31,35,0.08)] flex flex-col gap-3">
                   <Icon size={20} color="rgba(35,31,35,0.32)" />
-                  <p className="text-[#231f23] text-[28px] sm:text-[32px] tracking-[-0.5px]" style={{ fontWeight: 500 }}>{stat.value}</p>
+                  <CountUp
+                    to={stat.to}
+                    prefix={stat.prefix ?? ''}
+                    suffix={stat.suffix ?? ''}
+                    className="text-[#231f23] text-[28px] sm:text-[32px] tracking-[-0.5px]"
+                    style={{ fontWeight: 500 }}
+                  />
                   <p className="font-['Fragment_Mono',monospace] text-[rgba(35,31,35,0.48)] text-[11px] tracking-[0.5px] uppercase">{stat.label}</p>
                 </div>
               );
@@ -72,26 +110,29 @@ export function ClientsPage() {
         </AnimatedItem>
       </section>
 
-      {/* ───── Logo Cloud ───── */}
-      <section className="px-4 sm:px-8 pb-8">
-        <div className="max-w-[1240px] mx-auto">
-          <AnimatedItem className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 py-8">
+      {/* ───── Logo Marquee ───── */}
+      <section className="pb-8">
+        <AnimatedItem>
+          <Marquee duration={34}>
             {logos.map((name) => (
-              <p key={name} className="text-[rgba(35,31,35,0.32)] text-[14px] sm:text-[16px] tracking-wide whitespace-nowrap" style={{ fontWeight: 500 }}>{name}</p>
+              <p key={name} className="text-[rgba(35,31,35,0.4)] text-[16px] sm:text-[18px] tracking-wide whitespace-nowrap px-6" style={{ fontWeight: 500 }}>{name}</p>
             ))}
-          </AnimatedItem>
-        </div>
+          </Marquee>
+        </AnimatedItem>
       </section>
 
-      {/* ───── Featured Case Study ───── */}
+      {/* ───── Featured Case Study — image parallax inside masked frame ───── */}
       <section className="px-4 sm:px-8 py-8 sm:py-12">
-        <AnimatedSection className="w-full max-w-[1240px] mx-auto">
+        <ZoomReveal className="w-full max-w-[1240px] mx-auto">
           <div className="rounded-[20px] overflow-hidden relative h-[480px] sm:h-[560px] lg:h-[600px]">
-            <ImageWithFallback
-              src={featured.image}
-              alt="mercenary.ai team"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+            {/* Oversized image drifts slower than scroll */}
+            <Parallax distance={-40} className="absolute -inset-y-[60px] inset-x-0">
+              <ImageWithFallback
+                src={featured.image}
+                alt="mercenary.ai team"
+                className="w-full h-[calc(100%+120px)] object-cover"
+              />
+            </Parallax>
             {/* Gradient overlays */}
             <div className="absolute inset-0 bg-gradient-to-t from-[rgba(35,31,35,0.8)] via-[rgba(35,31,35,0.2)] to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-b from-[rgba(35,31,35,0.4)] to-transparent h-[200px]" />
@@ -122,10 +163,10 @@ export function ClientsPage() {
               </div>
             </div>
           </div>
-        </AnimatedSection>
+        </ZoomReveal>
       </section>
 
-      {/* ───── Testimonials Grid ───── */}
+      {/* ───── Testimonial Wall — columns drift at different speeds ───── */}
       <section className="px-4 sm:px-8 py-16 sm:py-20 lg:py-[120px]">
         <div className="max-w-[1240px] mx-auto">
           <AnimatedSection className="flex flex-col gap-6 items-start mb-12 md:mb-16">
@@ -134,34 +175,30 @@ export function ClientsPage() {
               <div className="bg-[#ed7472] rounded-[2px] shrink-0 size-[10px]" />
               <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[12px] tracking-[0.75px] uppercase">Testimonials</p>
             </div>
-            <p className="text-[#231f23] text-[28px] sm:text-[36px] lg:text-[40px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] max-w-[680px]">
-              What our clients say
-            </p>
+            <ScrollHeadline
+              text={'Five hundred teams. \n One brand system each.'}
+              accentWords={['each.']}
+              className="leading-[1.15] text-[28px] sm:text-[36px] lg:text-[40px] tracking-[-0.5px]"
+            />
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Desktop: 3 parallax columns */}
+          <div className="hidden lg:grid grid-cols-3 gap-6">
+            {[0, 1, 2].map((col) => (
+              <Parallax key={col} distance={col === 1 ? -36 : 20} className="flex flex-col gap-6">
+                {testimonials.filter((_, i) => i % 3 === col).map((t) => (
+                  <AnimatedItem key={t.name}>
+                    <TestimonialCard t={t} />
+                  </AnimatedItem>
+                ))}
+              </Parallax>
+            ))}
+          </div>
+          {/* Mobile/tablet: flat grid */}
+          <div className="grid lg:hidden grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((t, i) => (
               <AnimatedItem key={t.name} delay={i * 0.06}>
-                <div className="bg-white rounded-[20px] p-6 sm:p-8 border border-[rgba(35,31,35,0.08)] h-full flex flex-col">
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: t.color }}>
-                        <Quote size={14} color="#231f23" />
-                      </div>
-                      <p className="text-[rgba(35,31,35,0.48)] text-[14px] leading-[1.5]" style={{ fontWeight: 500 }}>{t.company}</p>
-                    </div>
-                    <div className="px-2.5 py-1 rounded-full bg-[#A7FFAC] shrink-0">
-                      <p className="font-['Fragment_Mono',monospace] text-[#231f23] text-[10px] tracking-[0.5px] uppercase">{t.stat}</p>
-                    </div>
-                  </div>
-                  <p className="text-[rgba(35,31,35,0.64)] text-[14px] leading-[1.5] flex-1 mb-6" style={{ fontWeight: 300 }}>
-                    "{t.quote}"
-                  </p>
-                  <div className="flex flex-col gap-0.5">
-                    <p className="text-[#231f23] text-[14px]" style={{ fontWeight: 500 }}>{t.name}</p>
-                    <p className="text-[rgba(35,31,35,0.48)] text-[14px] leading-[1.5]" style={{ fontWeight: 300 }}>{t.role}</p>
-                  </div>
-                </div>
+                <TestimonialCard t={t} />
               </AnimatedItem>
             ))}
           </div>
@@ -170,7 +207,7 @@ export function ClientsPage() {
 
       {/* ───── Bottom CTA ───── */}
       <section className="px-4 sm:px-8 pb-16 sm:pb-20 lg:pb-[120px]">
-        <AnimatedSection className="w-full max-w-[1240px] mx-auto">
+        <ZoomReveal className="w-full max-w-[1240px] mx-auto">
           <div className="bg-[#231f23] rounded-[20px] p-8 sm:p-12 lg:p-16 flex flex-col items-center text-center gap-6">
             <p className="text-[#f7f6f5] text-[24px] sm:text-[32px] lg:text-[40px] font-[Stack_Sans_Headline] tracking-[-0.5px] leading-[1.15] max-w-[600px]">
               Join 500+ teams creating smarter content
@@ -188,7 +225,7 @@ export function ClientsPage() {
               </Link>
             </div>
           </div>
-        </AnimatedSection>
+        </ZoomReveal>
       </section>
     </div>
   );
