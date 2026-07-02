@@ -97,7 +97,7 @@ export function Parallax({ children, distance = 40, className = '' }: {
   const y = useTransform(scrollYProgress, [0, 1], reduced ? [0, 0] : [distance, -distance]);
 
   return (
-    <motion.div ref={ref} style={{ y }} className={className}>
+    <motion.div ref={ref} style={{ y, willChange: reduced ? undefined : 'transform' }} className={className}>
       {children}
     </motion.div>
   );
@@ -114,10 +114,10 @@ export function ZoomReveal({ children, className = '', from = 0.94 }: {
   const reduced = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'start 0.35'] });
   const scale = useTransform(scrollYProgress, [0, 1], reduced ? [1, 1] : [from, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.4], reduced ? [1, 1] : [0.6, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.4], reduced ? [1, 1] : [0.75, 1]);
 
   return (
-    <motion.div ref={ref} style={{ scale, opacity }} className={className}>
+    <motion.div ref={ref} style={{ scale, opacity, willChange: reduced ? undefined : 'transform, opacity' }} className={className}>
       {children}
     </motion.div>
   );

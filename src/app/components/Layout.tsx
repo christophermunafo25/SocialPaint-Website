@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
+import { frame, cancelFrame } from 'motion/react';
 import { Navigation } from './Navigation';
 import { Footer } from './Footer';
 import { CTASection } from './CTASection';
@@ -9,26 +10,31 @@ export function Layout() {
   const { pathname } = useLocation();
   const lenisRef = useRef<Lenis | null>(null);
 
-  // Initialize Lenis smooth scrolling
+  // Initialize Lenis smooth scrolling.
+  // Lenis is driven inside Motion's frame loop (not its own rAF) so that
+  // scroll position updates and scroll-linked transforms (Parallax,
+  // ZoomReveal, ScrollHeadline…) land in the same frame — running two
+  // separate rAF loops causes a one-frame lag that reads as scroll jitter.
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       touchMultiplier: 2,
       infinite: false,
+      autoRaf: false,
       wrapper: window,
       content: document.documentElement,
     });
     lenisRef.current = lenis;
     (window as unknown as { lenis?: Lenis }).lenis = lenis;
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+    function update(data: { timestamp: number }) {
+      lenis.raf(data.timestamp);
     }
-    requestAnimationFrame(raf);
+    frame.update(update, true);
 
     return () => {
+      cancelFrame(update);
       lenis.destroy();
       lenisRef.current = null;
     };
